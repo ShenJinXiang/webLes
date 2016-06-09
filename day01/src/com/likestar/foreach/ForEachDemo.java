@@ -1,4 +1,4 @@
-package com.likestar.demos;
+package com.likestar.foreach;
 
 import java.util.ArrayList;
 import java.util.HashMap;
