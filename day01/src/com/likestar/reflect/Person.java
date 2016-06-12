@@ -11,16 +11,19 @@ public class Person {
 	private String desc;
 	
 	public Person() {
+		System.out.println("Person()");
 		this.id = UUID.randomUUID().toString().replace("-", "");
 	}
 	
 	public Person(String name, int age) {
+		System.out.println("Person(String, int)");
 		this.id = UUID.randomUUID().toString().replace("-", "");
 		this.name = name;
 		this.age = age;
 	}
 	
 	public Person(String name, int age, String address, String desc) {
+		System.out.println("Person(String, int, String, String)");
 		this.id = UUID.randomUUID().toString().replace("-", "");
 		this.name = name;
 		this.age = age;
