@@ -1,0 +1,38 @@
+dtd 内部声明
+	
+代码：
+<!DOCTYPE 根元素 [元素声明]>
+
+dtd 外部引用
+<!DOCTYPE 根元素 SYSTEM "文件名">
+<!DOCTYPE 根元素 PUBLIC "文件名" "文件路径">
+
+元素
+	声明：
+	<!ELEMENT 元素名称 类别> 或者 <!ELEMENT 元素名称 (元素内容)>
+	空元素：
+	<!ELEMENT 元素名称 EMPTY>
+	任意内容：
+	<!ELEMENT 元素名称 ANY>
+	PCDATA
+	<!ELEMENT 元素名称 (#PCDATA)>
+
+	元素内容用 , 分割表示子元素必须按照相同的顺序出现在文档中
+			   | 分割表示 二者取其一
+	+		出现一次或多次
+	*		出现零次或多次
+	?		出现零次或一次
+
+属性
+	声明：
+	<!ATTLIST 元素名称 属性名称 属性类型 默认值>
+	默认值参数：
+	#REQUIRED		属性值是必需的
+	#IMPLIED		不是必需的
+	#FIXED value	属性值是固定的
+	枚举属性值：
+	<!ATTLIST 元素名称 属性名称 (en1|en2|..) 默认值>
+
+实体
+	
+
