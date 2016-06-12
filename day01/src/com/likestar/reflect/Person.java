@@ -76,5 +76,15 @@ public class Person {
 		return "Person [id=" + id + ", name=" + name + ", age=" + age + ", address=" + address + ", desc=" + desc + "]";
 	}
 	
+	public void sayHello() {
+		System.out.println("Hello, my name is " + this.name);
+	}
 	
+	public static void main(String[] args) {
+		System.out.println("Hello world!");
+		for(String arg : args) {
+			System.out.print(arg + "\t");
+		}
+		System.out.println();
+	}
 }
