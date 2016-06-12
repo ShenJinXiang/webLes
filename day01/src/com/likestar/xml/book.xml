@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE 书架 SYSTEM "book.dtd" >
+<!DOCTYPE book SYSTEM "book.dtd" >
 <书架>
 	<书>
 		<书名>java书籍</书名>
@@ -11,5 +11,4 @@
 		<作者>作者b</作者>
 		<售价>11.22</售价>
 	</书>
-	<sdf></sdf>
 </书架>
