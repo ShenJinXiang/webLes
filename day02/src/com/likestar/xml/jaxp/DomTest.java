@@ -104,4 +104,22 @@ public class DomTest {
 		tf.transform(new DOMSource(document), new StreamResult("src/xml/books.xml"));
 	}
 	
+	/**
+	 * 删除 节点
+	 * @throws Exception
+	 */
+	@Test
+	public void test4() throws Exception {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder documentBuilder = factory.newDocumentBuilder();
+		Document document = documentBuilder.parse("src/xml/books.xml");
+		
+		Element bookElement1 = (Element) document.getElementsByTagName("book").item(1);
+		bookElement1.getParentNode().removeChild(bookElement1);
+		
+		TransformerFactory tfFactory = TransformerFactory.newInstance();
+		Transformer tf = tfFactory.newTransformer();
+		tf.transform(new DOMSource(document), new StreamResult("src/xml/books.xml"));
+	}
+	
 }

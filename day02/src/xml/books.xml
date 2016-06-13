@@ -1,19 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<books id="first" namespace="default">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><books id="first" namespace="default">
 	<book id="one">
 		<name>java</name>
 		<author>one1</author>
 		<price>11.11</price>
-	</book>
-	<book>
-		<name>JavaScript权威指南</name>
-		<author>LikeStar</author>
-		<price>119.10</price>
-	</book>
-	<book>
-		<name>JavaScript权威指南</name>
-		<author>LikeStar</author>
-		<price>119.10</price>
 	</book>
 	<book id="two">
 		<name>javascript</name>
