@@ -58,3 +58,8 @@ public static main(String[] args){
 	// 解析xml文档，得到代表文档的document
 	Document document = builder.parse(".../../.xml");
 }
+
+Document 写入到xml文件
+TransformerFactory tffactory = TransformerFactory.newInstance();
+Transformer tf = tffactory.newTransformer();
+tf.transform(new DOMSource(document), new StreamResult(new FileOutputStream("")));

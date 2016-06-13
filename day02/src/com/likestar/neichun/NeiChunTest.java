@@ -11,10 +11,8 @@ public class NeiChunTest {
 
 	@Test
 	public void test1() {
-//		byte[] b = new byte[1024 * 1024 * 126];
-//		System.out.println("ok~~");
-//		Map<String, Object> map = new HashMap<>();
-//		map.values();
+		byte[] b = new byte[1024 * 1024 * 126];
+		System.out.println("ok~~");
 	}
 	
 	@Test

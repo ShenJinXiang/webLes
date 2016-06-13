@@ -12,6 +12,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.junit.Test;
 import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -44,4 +45,24 @@ public class DomTest {
 		}
 		
 	}
+	
+	@Test
+	public void test2() throws Exception {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder documentBuilder = factory.newDocumentBuilder();
+		Document document = documentBuilder.parse("src/xml/books.xml");
+		Element root = document.getDocumentElement();
+		list(root);
+	}
+
+	private void list(Node ele) {
+		if(ele.getNodeType() == 1) {
+			System.out.println(ele.getNodeName());
+			NodeList list = ele.getChildNodes();
+			for(int i = 0; i < list.getLength(); i++) {
+				list(list.item(i));
+			}
+		}
+	}
+	
 }

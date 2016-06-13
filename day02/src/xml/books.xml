@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE books SYSTEM "src/xml/books.dtd">
+<!DOCTYPE books SYSTEM "books.dtd">
 <books id="first">
 	<book id="one">
 		<!-- <name>&bookName;</name> -->
