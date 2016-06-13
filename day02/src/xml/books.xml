@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE books SYSTEM "src/xml/books.dtd">
+<books id="first">
+	<book id="one">
+		<!-- <name>&bookName;</name> -->
+		<name>java</name>
+		<author>one1</author>
+		<price>11.11</price>
+	</book>
+	<book id="two">
+		<name>javascript</name>
+		<author>two1</author>
+		<price>22.22</price>
+	</book>
+</books>

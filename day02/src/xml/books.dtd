@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT books (book+)>
+<!ELEMENT book (name, author, price)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+
+<!ATTLIST books
+	namespace CDATA "default"
+	id ID #REQUIRED >
+<!ATTLIST book
+	id ID #IMPLIED >
+
+<!ENTITY bookName "Think in java" >
