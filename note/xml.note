@@ -36,3 +36,25 @@ dtd 外部引用
 实体
 	
 
+调整jvm内存
+	默认64M 内存空间
+public static main(String[] args){
+	byte b[] = new byte[1024 * 1024 * 1024];	// 开辟1G内存空间
+	byte b[] = new byte[1024 * 1024 * 55];	
+}
+
+xml解析开发包
+	Jaxp(sun)	Jdom	dom4j(性能最好)
+
+	Jaxp javax.xml.parsers DocumentBuilderFactory 创建解析器对象
+
+public static main(String[] args){
+	// 创建工厂
+	DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+
+	// 得到dom解析器
+	DocumentBuilder builder = factory.newDocumentBuilder();
+
+	// 解析xml文档，得到代表文档的document
+	Document document = builder.parse(".../../.xml");
+}
