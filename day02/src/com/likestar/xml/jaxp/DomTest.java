@@ -4,11 +4,16 @@ package com.likestar.xml.jaxp;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 import org.junit.Test;
 import org.w3c.dom.Document;
@@ -46,6 +51,10 @@ public class DomTest {
 		
 	}
 	
+	/**
+	 * 遍历xml节点
+	 * @throws Exception
+	 */
 	@Test
 	public void test2() throws Exception {
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -63,6 +72,36 @@ public class DomTest {
 				list(list.item(i));
 			}
 		}
+	}
+	
+	/**
+	 * 添加一个book节点
+	 * @throws Exception
+	 */
+	@Test
+	public void test3() throws Exception {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder documentBuilder = factory.newDocumentBuilder();
+		Document document = documentBuilder.parse("src/xml/books.xml");
+		
+		Element book1 = document.createElement("book");
+		Element bookName1 = document.createElement("name");
+		bookName1.setTextContent("JavaScript权威指南");
+		Element bookAuthor = document.createElement("author");
+		bookAuthor.setTextContent("LikeStar");
+		Element bookPrice = document.createElement("price");
+		bookPrice.setTextContent("119.10");
+		book1.appendChild(bookName1);
+		book1.appendChild(bookAuthor);
+		book1.appendChild(bookPrice);
+		
+		Element book = (Element) document.getElementsByTagName("book").item(1);
+		Element rootElement = document.getDocumentElement();
+		rootElement.insertBefore(book1, book);
+		
+		TransformerFactory tfFactory = TransformerFactory.newInstance();
+		Transformer tf = tfFactory.newTransformer();
+		tf.transform(new DOMSource(document), new StreamResult("src/xml/books.xml"));
 	}
 	
 }
