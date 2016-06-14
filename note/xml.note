@@ -105,3 +105,5 @@ write.close();
 OutputFormat format = OutputFormat.createPrettyPrint();
 format.setEncoding("utf-8");
 XMLWriter write = new XMLWriter(new OutputStreamWriter(new FileOutputStream("src/xml/books.xml"), "utf-8"), format);
+
+schema *.xsd	取代dtd 
