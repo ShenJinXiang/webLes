@@ -1,7 +1,7 @@
 package com.likestar.exam.dao;
 
 import com.likestar.exam.entity.Student;
-import com.likestar.exception.StudentNotException;
+import com.likestar.exam.exceptions.StudentNotException;
 
 public interface IStudentDao {
 

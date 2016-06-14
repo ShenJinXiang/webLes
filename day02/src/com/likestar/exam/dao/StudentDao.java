@@ -5,7 +5,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import com.likestar.exam.entity.Student;
-import com.likestar.exception.StudentNotException;
+import com.likestar.exam.exceptions.StudentNotException;
 import com.likestar.utils.XMLUtils;
 
 public class StudentDao implements IStudentDao{

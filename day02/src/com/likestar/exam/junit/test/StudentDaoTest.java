@@ -5,7 +5,7 @@ import org.junit.Test;
 import com.likestar.exam.dao.IStudentDao;
 import com.likestar.exam.dao.StudentDao;
 import com.likestar.exam.entity.Student;
-import com.likestar.exception.StudentNotException;
+import com.likestar.exam.exceptions.StudentNotException;
 
 /**
  * 

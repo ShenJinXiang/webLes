@@ -1,6 +1,6 @@
-package com.likestar.exception;
+package com.likestar.exam.exceptions;
 
-public class StudentNotException extends Exception{
+public class StudentNotException extends Exception {
 
 	public StudentNotException() {
 		super();
@@ -21,6 +21,5 @@ public class StudentNotException extends Exception{
 	public StudentNotException(Throwable cause) {
 		super(cause);
 	}
-	
 	
 }
