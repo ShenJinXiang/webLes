@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><books id="first" namespace="default">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<books id="first" namespace="default">
 	<book id="one">
 		<name>java</name>
 		<author>one1</author>
