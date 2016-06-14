@@ -42,7 +42,7 @@ public class MyDemo {
 	
 	@Test
 	public void test2() {
-		int num = 100;
+		int num = 45;
 		int row = num / 4 + 1;
 		int col = num;
 		int[][] arr = new int[row][col];
@@ -68,11 +68,10 @@ public class MyDemo {
 				x = x - 2;
 			}
 		}
-		
+		int l = (num + "").length();
 		for(int i = 0; i < arr.length; i++) {
 			for(int j = 0; j < arr[i].length; j++) {
-//				System.out.print((arr[i][j] == 0) ? (" ") : (arr[i][j]));
-				System.out.printf("%3s", (arr[i][j] == 0) ? (" ") : (arr[i][j]));
+				System.out.printf("%" + l + "s", (arr[i][j] == 0) ? (" ") : (arr[i][j]));
 			}
 			System.out.println();
 		}
