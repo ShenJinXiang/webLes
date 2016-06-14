@@ -88,3 +88,20 @@ public staitc void main(String[] args) {
 // 得到xml文档内容
 class ListHandler implenments ContentHandler() {
 }
+
+dom4j解析
+
+// 获取document对象
+SAXReader reader = new SAXReader();
+Document document = reader.read(new File("src/xml/books.xml"));
+Element root = document.getRootElement();
+
+// 写入文件
+XMLWriter write = new XMLWriter(new FileWriter("*.xml")); // OutputStreamWriter
+write.write(document);
+write.close();
+
+// 格式化输出
+OutputFormat format = OutputFormat.createPrettyPrint();
+format.setEncoding("utf-8");
+XMLWriter write = new XMLWriter(new OutputStreamWriter(new FileOutputStream("src/xml/books.xml"), "utf-8"), format);

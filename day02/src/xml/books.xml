@@ -1,13 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<books id="first" namespace="default">
-	<book id="one">
-		<name>java</name>
-		<author>one1</author>
-		<price>11.11</price>
-	</book>
-	<book id="two">
-		<name>javascript</name>
-		<author>two1</author>
-		<price>22.22</price>
-	</book>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<books id="first" namespace="default"> 
+  <book id="one"> 
+    <name>java</name>  
+    <author>one1</author>  
+    <price>11.11</price> 
+  </book>  
+  <book id="two"> 
+    <name>javascript</name>  
+    <author>two1</author>  
+    <price>22.22</price> 
+  </book>  
+  <book id="three">
+    <name>python</name>
+    <author>申锦祥</author>
+    <primce>99.12元</primce>
+  </book>
 </books>
