@@ -1,5 +1,10 @@
 package com.likestar.demo;
 
+import java.io.FileInputStream;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
 import org.junit.Test;
 
 public class MyDemo {
@@ -75,5 +80,26 @@ public class MyDemo {
 			}
 			System.out.println();
 		}
+	}
+	
+	@Test
+	public void test3() throws Exception{
+		ServerSocket server = new ServerSocket(8899);
+		Socket socket = server.accept();
+		
+		FileInputStream is = new FileInputStream("src/test.html");
+		OutputStream os = socket.getOutputStream();
+		
+		int len = 0;
+		byte buff[] = new byte[1024];
+		while((len = is.read(buff)) > 0) {
+			os.write(buff, 0, len);
+		}
+		
+		is.close();
+		os.flush();
+		os.close();
+		socket.close();
+		server.close();
 	}
 }

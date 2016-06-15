@@ -1,0 +1,31 @@
+tomcat
+Catalina_Home 环境变量 谨慎
+
+tomcat目录作用
+
+bin			存放启动和关闭Tomcat的脚本
+conf		Tomcat配置文件 Server.xml
+lib			Tomcat的支撑jar
+logs		日志文件
+temp		运行时临时文件
+webapps		web资源存放目录
+work		工作目录 
+
+虚拟目录映射	
+Server.xml
+
+Host中
+<Context path"/news" docBase="D:\news" />
+
+******************************************************
+web 组成结构
+
+WebRoot
+	
+	html,jsp, css js
+
+	WEB-INF
+		classes
+		lib
+		web.xml
+******************************************************
