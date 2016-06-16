@@ -22,12 +22,24 @@ public class PersonDemo {
 	 * @throws IOException
 	 */
 	@Test
-	public void test1() throws FileNotFoundException, IOException {
-		Person person = new Person("张三", 12, "北京", "一个好人！");
-		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("person.data"));
-		out.writeObject(person);
-		out.flush();
-		out.close();
+	public void test1() {
+		ObjectOutputStream out = null;
+		try{
+			Person person = new Person("张三", 12, "北京", "一个好人！");
+			out = new ObjectOutputStream(new FileOutputStream("person.data"));
+			out.writeObject(person);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if(out != null) {
+				try {
+					out.flush();
+					out.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 	
 	/**
@@ -37,10 +49,23 @@ public class PersonDemo {
 	 * @throws ClassNotFoundException
 	 */
 	@Test
-	public void test2() throws FileNotFoundException, IOException, ClassNotFoundException {
-		ObjectInputStream in = new ObjectInputStream(new FileInputStream("person.data"));
-		Person p1 = (Person) in.readObject();
-		System.out.println(p1);
-		in.close();
+	public void test2() {
+		ObjectInputStream in = null;
+		try {
+			in = new ObjectInputStream(new FileInputStream("person.data"));
+			Person p1 = (Person) in.readObject();
+			System.out.println(p1);
+			in.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if(in != null) {
+				try {
+					in.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 }
