@@ -18,7 +18,7 @@ public class ServletDemo extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		test3(req, resp);
+		test4(req, resp);
 	}
 	
 	/**
@@ -63,4 +63,17 @@ public class ServletDemo extends HttpServlet {
 		resp.getOutputStream().write(gzip);
 	}
 	
+	private int count = 0;
+	
+	/**
+	 * 每隔3秒刷新一次
+	 * @param req
+	 * @param resp
+	 * @throws IOException
+	 */
+	private void test4(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		String str = "<h1>shenjinxiang" + count++ + "</h1>";
+		resp.setHeader("Refresh", "3");
+		resp.getOutputStream().write(str.getBytes());
+	}
 }
