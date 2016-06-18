@@ -29,7 +29,23 @@ Http响应
 	Server:服务器的类型
 	Content-Encoding:数据的压缩格式
 	Content-Length:压缩数据的长度
+	Content-Type:回送数据的类型
+	Last-Modified:当前资源的缓存时间
+	Refresh:告诉浏览器隔多长时间刷新一次 (聊天室)
+	Content-Disposition:浏览器已下载方式打开数据
+	Transfer-Encoding:数据的传送格式
+	ETag:缓存相关
 
-
-
-GZIPOutputStream 对象
+	压缩数据
+	GZIPOutputStream 对象
+	String data = "sdfsdfsdfsf";
+	ByteArrayOutputStream bout = new ByteArrayOutputStream();
+	GZIPOutputStream gout = new GZIPOutputStream(bout);
+	gout.write(data.getBytes());
+	gout.close();
+	
+	byte gzip[] = bout.toByteArray();
+	
+	response.setHeader("Content-Encoding", "gzip");
+	response.setHeader("Content-Length", gzip.length + "");
+	response.getOutputStream().write(gzip);
