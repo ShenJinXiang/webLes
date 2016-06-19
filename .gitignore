@@ -15,3 +15,6 @@ hs_err_pid*
 RemoteSystemsTempFiles/
 .metadata/
 .recommenders/
+
+#.DS_store
+.DS_store
