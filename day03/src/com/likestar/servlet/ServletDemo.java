@@ -74,6 +74,8 @@ public class ServletDemo extends HttpServlet {
 	private void test4(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		String str = "<h1>shenjinxiang" + count++ + "</h1>";
 		resp.setHeader("Refresh", "3");
+		resp.setHeader("Content-Type", "text/html");
+		System.out.println(str);
 		resp.getOutputStream().write(str.getBytes());
 	}
 }
