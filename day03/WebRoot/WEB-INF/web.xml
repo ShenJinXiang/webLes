@@ -8,4 +8,24 @@
 	<servlet-name>ServletDemo</servlet-name>
 	<url-pattern>/demo</url-pattern>
 </servlet-mapping>
+<servlet>
+	<servlet-name>ConfigServletDemo</servlet-name>
+	<servlet-class>com.likestar.servlet.ConfigServletDemo</servlet-class>
+	<init-param>
+		<param-name>name</param-name>
+		<param-value>ShenJinXiang</param-value>
+	</init-param>
+	<init-param>
+		<param-name>age</param-name>
+		<param-value>18</param-value>
+	</init-param>
+	<init-param>
+		<param-name>desc</param-name>
+		<param-value>一个好人</param-value>
+	</init-param>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ConfigServletDemo</servlet-name>
+	<url-pattern>/configDemo</url-pattern>
+</servlet-mapping>
 </web-app>
