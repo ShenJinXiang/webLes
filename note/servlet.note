@@ -3,3 +3,16 @@
 
 ServletConfig
 	servlet配置文件中， <init-param>初始化参数
+ServletContext
+	代表当前web应用 context域对象
+	this.getServletConfig().getServletContext();	// 方式1
+	this.getServletContext();		// 方式2
+	多个servlet之间通话
+
+	<Context-param>标签之间配ServletContext对象
+	实现Servlet转发
+		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("*.jsp");
+		rd.forward(request, response);
+	管理资源文件 (xml properties)
+		得到文件路径
+			this.getServletContext().getResourceAsStream("/");
