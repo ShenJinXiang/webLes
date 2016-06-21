@@ -16,3 +16,7 @@ ServletContext
 	管理资源文件 (xml properties)
 		得到文件路径
 			this.getServletContext().getResourceAsStream("/");
+
+	注意：普通java对象中，需要通过类装载器读文件, 但是文件不能太大，容易内存溢出
+	1. InputStream in = UserDao.class.getClassLoder().getResourceAsStream("*.properties");
+	2. String path = UserDao.class.getClassLoder().getResource("*.properties").getPath();
