@@ -9,4 +9,12 @@
   	<servlet-name>ServletDemo</servlet-name>
   	<url-pattern>/demo</url-pattern>
   </servlet-mapping>
+  <context-param>
+  	<param-name>encoding</param-name>
+  	<param-value>utf-8</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>contextName</param-name>
+  	<param-value>day04</param-value>
+  </context-param>
 </web-app>
