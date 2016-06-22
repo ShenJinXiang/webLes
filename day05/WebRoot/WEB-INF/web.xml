@@ -27,4 +27,13 @@
   	<servlet-name>DownloadServlet</servlet-name>
   	<url-pattern>/download</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>RefreshServlet</servlet-name>
+  	<servlet-class>com.shenjinxiang.servlet.response.RefreshServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RefreshServlet</servlet-name>
+  	<url-pattern>/refresh</url-pattern>
+  </servlet-mapping>
 </web-app>

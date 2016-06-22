@@ -35,3 +35,6 @@ HttpServletResponse
 
 		response.setHeader("content-dispsition", "attachment;filename="+URLEncoder.encode(filename, "utf-8"));//如果文件名为中文，需要转码
 	}
+
+	控制浏览器定时刷新
+		response.setHeader("refresh", "3");
