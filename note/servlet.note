@@ -27,3 +27,11 @@ HttpServletResponse
 	
 	<meta> 可以模拟http响应头
 	<meta http-equiv='content-type' content='text/html;charset=utf-8'
+
+	文件下载功能{
+		String path = this.getServletContext().getRealPath("");// 资源路径
+
+		response.setHeader("content-dispsition", "attachment;filename="+filename);//设置http响应头 为下载
+
+		response.setHeader("content-dispsition", "attachment;filename="+URLEncoder.encode(filename, "utf-8"));//如果文件名为中文，需要转码
+	}
