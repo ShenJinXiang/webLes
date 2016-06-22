@@ -20,3 +20,10 @@ ServletContext
 	注意：普通java对象中，需要通过类装载器读文件, 但是文件不能太大，容易内存溢出
 	1. InputStream in = UserDao.class.getClassLoder().getResourceAsStream("*.properties");
 	2. String path = UserDao.class.getClassLoder().getResource("*.properties").getPath();
+
+HttpServletResponse
+	response.setHeader("Content-type", "text/html;charset=UTF-8");	// 控制浏览器编码
+	response.getOutputStream()
+	
+	<meta> 可以模拟http响应头
+	<meta http-equiv='content-type' content='text/html;charset=utf-8'
