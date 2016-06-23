@@ -38,3 +38,16 @@ HttpServletResponse
 
 	控制浏览器定时刷新
 		response.setHeader("refresh", "3");
+
+	response控制浏览器缓存
+		response.setDateHeader("Expries", System.currentTimeMillis() + 1000 * 3600);// 一个小时内不要缓存
+	
+	response请求重定向
+		response.setStatus(302);
+		response.setHeader("location",	"");
+		或
+		response.setRedirect("");
+		发送了两次请求 尽量少用 因为要加重服务器负担
+		必须要请求重定向的地方举例：登录、购物
+	
+	response 的 getOutputStream 和 getWriter方法在一个response中只能用一次
