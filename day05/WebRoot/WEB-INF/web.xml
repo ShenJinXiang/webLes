@@ -10,6 +10,7 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+  <!-- Response test start -->
   <servlet>
   	<servlet-name>ResponseDemo</servlet-name>
   	<servlet-class>com.shenjinxiang.servlet.response.ResponseDemo</servlet-class>
@@ -36,4 +37,25 @@
   	<servlet-name>RefreshServlet</servlet-name>
   	<url-pattern>/refresh</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>NoRefreshServlet</servlet-name>
+  	<servlet-class>com.shenjinxiang.servlet.response.NoRefreshServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>NoRefreshServlet</servlet-name>
+  	<url-pattern>/norefresh</url-pattern>
+  </servlet-mapping>
+  <!-- Response test end -->
+  
+  <!-- Request test start -->
+  <servlet>
+  	<servlet-name>RequestDemo1</servlet-name>
+  	<servlet-class>com.shenjinxiang.servlet.request.RequestDemo1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>RequestDemo1</servlet-name>
+  	<url-pattern>/requestDemo1</url-pattern>
+  </servlet-mapping>
+  <!-- Request test end -->
 </web-app>
