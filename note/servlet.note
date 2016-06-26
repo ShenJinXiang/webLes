@@ -60,3 +60,8 @@ HttpSerlvetRequest
 	request.getRemoteHost();
 	request.getRemotePort();
 	request.getMethod();
+
+	request.getParameterMap();
+
+	request中文乱码
+		request.setCharacterEncoding("UTF-8");
