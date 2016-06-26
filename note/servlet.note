@@ -70,3 +70,13 @@ HttpSerlvetRequest
 		// get方式提交
 		String name = request.getParameter("name");
 		String val = new String(name.getBytes("ISO9005-1"), "IUTF-8");
+	
+	request 实现包含
+		request.getRequestDispatcher("*.jsp").include(req, resp);
+	
+	Web中的地址
+		1. 尽量以“／”开头，如果服务器使用代表当前web应用
+		2. 浏览器使用 /day06/...
+	
+	referer防盗链
+		String referer = request.getHeader("referer");
