@@ -64,4 +64,9 @@ HttpSerlvetRequest
 	request.getParameterMap();
 
 	request中文乱码
+		// post 方式提交
 		request.setCharacterEncoding("UTF-8");
+
+		// get方式提交
+		String name = request.getParameter("name");
+		String val = new String(name.getBytes("ISO9005-1"), "IUTF-8");
