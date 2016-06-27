@@ -112,3 +112,8 @@ Session
 		cookie.setMaxAge(30 * 24 * 3600);	// 一个月有效期
 		cookie.setPath("/day07");
 		response.addCookie(cookie);
+	细节
+		1.cookie智能标识一种信息，至少包含名称和值
+		2.浏览器一般值允许存放300个cookie，每个站点最多20个，每个cookie最多4kb
+		3.默认为一个会话级别，存在浏览器内存中，用户退出后即被删除；使用maxAge写到硬盘上
+		4.删除cookie时，path必须一致，否则不会删除
