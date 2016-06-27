@@ -1,4 +1,4 @@
-线程安全问题
+线程安全问RR
 	当多个客户的并发访问同一个Servlet时，服务器会为每一个客户端访问请求创建一个线程，如果service方法调用统一资源的话， 可能引发线程安全问题。
 
 ServletConfig
@@ -80,3 +80,35 @@ HttpSerlvetRequest
 	
 	referer防盗链
 		String referer = request.getHeader("referer");
+
+会话
+	用户开一个浏览器，点击多个超链接，访问服务器多个web资源，然后关闭浏览器，整个过程称为一个会话
+
+Cookie
+	客户端技术，程序吧每个用户的数据以cookie的形式写给各自的浏览器，当防伪服务器中的web资源时，web服务器可以获取到用户各自的数据。
+
+Session
+	服务器端技术，服务器可以在运行时为每个用户的浏览器创建一个独享的session对象
+	request.getCookies() // 获取所有cookie
+	setMaxAge() getMaxAge() // 设置cookie有效期，秒为单位，如果不设置，cookie有效期为浏览器进程
+	setPath getPath	// cookie有效目录 默认为设置cookie的servlet的目录
+	setDomain  getDomain	//设置cookie有效域
+	
+	显示上次访问时间
+		PritWriter out = response.getWrite();
+		out.prit("你上次访问时间是：");
+		// 获得用户的时间cookie
+		Cookie cookies[] = request.getCookies();
+		for(int i = 0; cookies != null && i < cookies.length; i++){
+			if(cookies[i].getName().equals("lastAccessTime")) {
+				long cookieValue = Long.parseLong(cookies[i].getValue()); // 得到用户访问时间
+				Date date = new Date(cookieValue);
+				out.print(date.toLocalString());
+			}
+		}
+		
+		//给用户回送最新的访问时间
+		Cookie cookie = new Cookie("lastAccessTime", System.currentTimeMillis() + "");
+		cookie.setMaxAge(30 * 24 * 3600);	// 一个月有效期
+		cookie.setPath("/day07");
+		response.addCookie(cookie);
