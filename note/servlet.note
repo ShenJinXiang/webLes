@@ -108,7 +108,15 @@ Session
 		}
 		
 		//给用户回送最新的访问时间
-		Cookie cookie = new Cookie("lastAccessTime", System.currentTimeMillis() + "");
+		Cookie cookie = new Cookie("lastAccessTime", System.currentTimeMillis() + ""); 
 		cookie.setMaxAge(30 * 24 * 3600);	// 一个月有效期
 		cookie.setPath("/day07");
 		response.addCookie(cookie);
+	session的一些细节
+		浏览器新建标签页的时候共享session
+		弹出窗口也共享session 
+
+域对象总结
+	request 数据显示完了就没用了
+	session	显示用完等会还要用
+	servletContext	不仅等会还要用，用户还要共享数据
