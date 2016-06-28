@@ -86,14 +86,10 @@ HttpSerlvetRequest
 
 Cookie
 	客户端技术，程序吧每个用户的数据以cookie的形式写给各自的浏览器，当防伪服务器中的web资源时，web服务器可以获取到用户各自的数据。
-
-Session
-	服务器端技术，服务器可以在运行时为每个用户的浏览器创建一个独享的session对象
 	request.getCookies() // 获取所有cookie
 	setMaxAge() getMaxAge() // 设置cookie有效期，秒为单位，如果不设置，cookie有效期为浏览器进程
 	setPath getPath	// cookie有效目录 默认为设置cookie的servlet的目录
 	setDomain  getDomain	//设置cookie有效域
-	
 	显示上次访问时间
 		PritWriter out = response.getWrite();
 		out.prit("你上次访问时间是：");
@@ -112,6 +108,17 @@ Session
 		cookie.setMaxAge(30 * 24 * 3600);	// 一个月有效期
 		cookie.setPath("/day07");
 		response.addCookie(cookie);
+Session
+	服务器端技术，服务器可以在运行时为每个用户的浏览器创建一个独享的session对象
+		注意：虽然代码相同，但不通浏览器得到各自的数据
+		request.getSession();
+		session.invalidate();	// 摧毁session
+	实现原理
+		每个session都有一个id，将id以cookie的形式发送给浏览器。该cookie没有有效期
+	如果浏览器禁用cookie
+		重写url，url后添加sessionid
+		response.encodeURL("*");	// url后添加sessionid
+
 	session的一些细节
 		浏览器新建标签页的时候共享session
 		弹出窗口也共享session 
@@ -120,3 +127,8 @@ Session
 	request 数据显示完了就没用了
 	session	显示用完等会还要用
 	servletContext	不仅等会还要用，用户还要共享数据
+	细节
+		1.cookie智能标识一种信息，至少包含名称和值
+		2.浏览器一般值允许存放300个cookie，每个站点最多20个，每个cookie最多4kb
+		3.默认为一个会话级别，存在浏览器内存中，用户退出后即被删除；使用maxAge写到硬盘上
+		4.删除cookie时，path必须一致，否则不会删除
