@@ -50,3 +50,22 @@ JSP -- Java Server Pages
 				response.getWriter().write("wowowowo");
 			%>
 			结果： wowowowohahaha
+		pageContext对象
+			jsp中最重要的对象，可以获取其他隐式对象
+			自定义标签的时候，需要用到
+			pageContext.findAttribute("data"); // 按page request session applation中查找值
+	
+	JSP标签
+		<jsp:forward page="*.*"></jsp:forward>
+		<jsp:include page="*.*"></jsp:include> <%-- 动态包含 --%>
+		<jsp:param name="" value=""></jsp:param>
+	
+	jsp 映射
+		<servlet>
+			<servlet-name></servlet-name>
+			<jsp-file></jsp-file>
+		</servlet>
+	JSP中的错误
+		1. 如果jsp语法错误导致没法生成servlet，错误讲显示jsp出错的行列位置
+		2. jsp页面中jsp语法没问题，但是翻译成的servlet源文件中出现了java语法问题，导致jsp翻译成的servlet文件不能通过编译，提示jsp页面的行列
+		3. 翻译成servlet后在运行时候出现异常，提示错误信息在servlet源文件的位置
