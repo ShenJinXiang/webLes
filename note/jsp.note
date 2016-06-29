@@ -31,4 +31,22 @@ JSP -- Java Server Pages
 				[isErrorPage="true"]
 			%>
 		include指令
+			<%@include file="/*.jsp" %>
+			包含的页面不需要head body等标签
+			静态包含，转成一个servlet
+			request.getRequestDispatcher("").inclde(request, response);	// 动态包含
+			静态包含性能好，尽量使用静态包含
 		taglib指令
+
+	jsp 运行原理
+		第一次访问时需要转成servlet 所以速度比较慢
+	
+	九大隐式对象
+		request response session application config page out exception pageContext
+
+		out对象 JspWrite类
+			<%
+				out.write("hahaha");
+				response.getWriter().write("wowowowo");
+			%>
+			结果： wowowowohahaha
