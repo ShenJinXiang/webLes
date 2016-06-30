@@ -50,3 +50,10 @@ JSP -- Java Server Pages
 				response.getWriter().write("wowowowo");
 			%>
 			结果： wowowowohahaha
+
+javaBean
+	1. java类必须有一个无参构造函数
+	2. 属性必须私有化
+	3. 私有化的属性必须通过public类型的方法暴露给其他程序，并且方法的命名也必须遵守一定的规范
+
+	<jsp:useBean>
