@@ -69,3 +69,10 @@ JSP -- Java Server Pages
 		1. 如果jsp语法错误导致没法生成servlet，错误讲显示jsp出错的行列位置
 		2. jsp页面中jsp语法没问题，但是翻译成的servlet源文件中出现了java语法问题，导致jsp翻译成的servlet文件不能通过编译，提示jsp页面的行列
 		3. 翻译成servlet后在运行时候出现异常，提示错误信息在servlet源文件的位置
+
+javaBean
+	1. java类必须有一个无参构造函数
+	2. 属性必须私有化
+	3. 私有化的属性必须通过public类型的方法暴露给其他程序，并且方法的命名也必须遵守一定的规范
+
+	<jsp:useBean>
