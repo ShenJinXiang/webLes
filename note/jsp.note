@@ -75,4 +75,20 @@ javaBean
 	2. 属性必须私有化
 	3. 私有化的属性必须通过public类型的方法暴露给其他程序，并且方法的命名也必须遵守一定的规范
 
-	<jsp:useBean>
+自定义标签
+	1. 编写实现Tag接口的java类 javax.servlet.jsp.tagext
+	2. 编写标签哭描述符(tld)文件，把标签处理器类描述成一个标签
+		setPageContext(PageContext pc)
+
+	test:
+		自定义标签，输出客户ip
+
+		public class ViewIpTag extends TagSupport {
+			
+			public int doStartTag() throws JspException {
+				HttpServletRequest req = (HttpServletRequest)this.pageContext.getRequest();
+				JspWriter out = this.pageContext.getOut();
+				String ip = request.getRemoteAddr();
+				out.print(ip);
+			}
+		}
