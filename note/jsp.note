@@ -124,3 +124,8 @@ javaBean
 				return IterationTag.SKIP_BODY;
 			}
 		}
+	
+	控制标签中的内容
+		doStartTag中 return BodyTag.EVAL_BODY_BUFFERED;
+		doEndTag中， this.getbodyContent();
+		this.pageContext.getOut().write();
