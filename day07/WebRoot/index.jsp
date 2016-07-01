@@ -16,5 +16,8 @@
 	<ls:redundant>
 		123456 
 	</ls:redundant>
+	<ls:upcase>
+		abcdefghijklmnopqrstuvwxyz
+	</ls:upcase>
 </body>
 </html>
