@@ -12,5 +12,9 @@
 	<ls:hide>
 		I LOVE YOU!!
 	</ls:hide>
+	<br/>
+	<ls:redundant>
+		123456 
+	</ls:redundant>
 </body>
 </html>

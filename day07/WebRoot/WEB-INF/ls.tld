@@ -24,4 +24,10 @@
   	<tag-class>com.shenjinxiang.tags.HideTag</tag-class>
   	<body-content>JSP</body-content>
   </tag>
+  
+  <tag>
+  	<name>redundant</name>
+  	<tag-class>com.shenjinxiang.tags.RedundantTag</tag-class>
+  	<body-content>JSP</body-content>
+  </tag>
 </taglib>
