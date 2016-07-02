@@ -36,4 +36,15 @@
   	<tag-class>com.shenjinxiang.tags.UpcastTag</tag-class>
   	<body-content>JSP</body-content>
   </tag>
+  
+  <tag>
+  	<name>if</name>
+  	<tag-class>com.shenjinxiang.tags.IfTag</tag-class>
+  	<body-content>scriptless</body-content>
+  	<attribute>
+  		<name>test</name>
+  		<required>true</required>
+  		<description>true</description>
+  	</attribute>
+  </tag>
 </taglib>

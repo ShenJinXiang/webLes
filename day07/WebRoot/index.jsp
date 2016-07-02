@@ -19,5 +19,11 @@
 	<ls:upcase>
 		abcdefghijklmnopqrstuvwxyz
 	</ls:upcase>
+	
+	<br><br><br><br><br>
+	<ls:if test="false">
+		abcdefghij
+	</ls:if>
+	<ls:if test="true">klmnopqrstuvwxyz</ls:if>
 </body>
 </html>
