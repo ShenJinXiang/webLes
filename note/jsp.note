@@ -165,3 +165,41 @@ javaBean
 		带属性的标签
 			1. 在标签处理器类中，编写每个属性对应的setter方法
 			2. 在tld文件中描述属性
+
+		开发防盗链标签
+			<ls:referer site="http://localhost" page="/index.jsp" />
+
+			public class RefererTag extends SimpleTagSupport {
+				private String site;
+				private String page;
+
+				public void setSite(String site) {
+					this.site = site;
+				}
+
+				public void setPage(String page) {
+					this.page = page;
+				}
+
+				public void doTag() throws JspException, IoException {
+					PageContext pageContext - (PageContext)this.getJspContext();
+					HttpServletRequest request = (HttpServletRequest) pageContext.getRequest();
+					HttpServletResponse resp = (HttpServeltResponse) pageContext.getResponse();
+
+					// 1.得到访问者referer
+					String referer = request.getHeader("referer");
+					if(referer == null || !referer.startsWith(site)) {
+						//resp.sendRedirect(request.getContextPath() + "/" + page);
+						if(page.startWith(request.getContextPath())) {
+							resp.sendRedirect(page);
+						} else if(page.setartWith("/")) {
+							resp.sendRedirect(request.getContextPath() + page);
+						} else {
+							resp.sendRedirect(request.getContextPath() + "/" + page);
+						}
+						throw new SkipPageException();
+					} else {
+						
+					}
+				}
+			}
