@@ -37,6 +37,7 @@
   	<body-content>JSP</body-content>
   </tag>
   
+  <!-- if tag -->
   <tag>
   	<name>if</name>
   	<tag-class>com.shenjinxiang.tags.IfTag</tag-class>
@@ -46,5 +47,27 @@
   		<required>true</required>
   		<description>true</description>
   	</attribute>
+  </tag>
+  
+  <tag>
+  	<name>choose</name>
+  	<tag-class>com.shenjinxiang.tags.ChooseTag</tag-class>
+  	<body-content>scriptless</body-content>
+  </tag>
+  
+  <tag>
+  	<name>when</name>
+  	<tag-class>com.shenjinxiang.tags.WhenTag</tag-class>
+  	<body-content>scriptless</body-content>
+  	<attribute>
+  		<name>test</name>
+  		<required>true</required>
+  		<rtexprvalue>true</rtexprvalue>
+  	</attribute>
+  </tag>
+  <tag>
+  	<name>otherwise</name>
+  	<tag-class>com.shenjinxiang.tags.OtherwiseTag</tag-class>
+  	<body-content>scriptless</body-content>
   </tag>
 </taglib>

@@ -203,3 +203,5 @@ javaBean
 					}
 				}
 			}
+		choose when标签
+			ChooseTag parent = this.getParent();

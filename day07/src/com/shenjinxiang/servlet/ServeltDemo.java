@@ -16,7 +16,10 @@ public class ServeltDemo extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.getWriter().write("hehehehe");
+		System.out.println("hello world!");
+		int num = 32;
+		req.setAttribute("num", num);
+		req.getRequestDispatcher("001.jsp").forward(req, resp);
 	}
 
 }
