@@ -129,3 +129,39 @@ javaBean
 		doStartTag中 return BodyTag.EVAL_BODY_BUFFERED;
 		doEndTag中， this.getbodyContent();
 		this.pageContext.getOut().write();
+
+	简单标签库开发 
+		继承SimpleTagSupport类
+		setJspBody -> doTag
+		1. 遇到简单标签
+		2. 实例化标签处理器类
+		3. setJspCont
+		4. 传递父标签setParent发放，如果没有传null
+		5. setJspBody吧封装了标签体的JspFragment传给标签处理器类
+		5. 执行标签，doTag
+
+		控制标签体执行
+			public class SimpleTagDemo extends SimpleTagSupport {
+				public void doTag() throws JspException, IOException {
+					JspFragment jf = this.getJspBody();
+					jf.invoke(this.getJspContext().getOut());	// 同jf.invoke(null);
+				}
+			}
+
+		不执行：
+			doTag()中不写代码即可
+		修改标签题内容
+			public void doTag() throws JspException, IOException {
+				JspFragment jf = this.getJspBody();
+				StringWriter sw = new StringWriter();
+				jf.invoke(sw);
+
+				String content = sw.toString();
+				content = content.toUpperCase();
+
+				this.getJspContext().getOut().write(content);
+			}
+
+		带属性的标签
+			1. 在标签处理器类中，编写每个属性对应的setter方法
+			2. 在tld文件中描述属性
