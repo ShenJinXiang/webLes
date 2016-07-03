@@ -70,4 +70,20 @@
   	<tag-class>com.shenjinxiang.tags.OtherwiseTag</tag-class>
   	<body-content>scriptless</body-content>
   </tag>
+  
+  <tag>
+  	<name>foreach</name>
+  	<tag-class>com.shenjinxiang.tags.ForeachTag</tag-class>
+  	<body-content>scriptless</body-content>
+  	<attribute>
+  		<name>items</name>
+  		<required>true</required>
+  		<rtexprvalue>true</rtexprvalue>
+  	</attribute>
+  	<attribute>
+  		<name>var</name>
+  		<required>true</required>
+  		<rtexprvalue>false</rtexprvalue>
+  	</attribute>
+  </tag>
 </taglib>

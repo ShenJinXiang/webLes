@@ -205,3 +205,44 @@ javaBean
 			}
 		choose when标签
 			ChooseTag parent = this.getParent();
+		foreach 标签
+
+			public class ForeachTag extends SimpleTagSupport {
+				
+				private Object items;
+				private String var;
+
+				public setItems(Object items) {
+					this.items = items;
+				}
+
+				public setVar(String var) {
+					this.var = var;
+				}
+
+				public void doTag() throws JspException, IOException {
+					List list = (List) items;
+					Iterator it = list.iterator();
+					while(it.hasNext()) {
+						Object value = it.next();
+
+						this.getJspContext().setAttribute(var, value);
+						this.getJspBody().invoke(null);
+					}
+				}
+			}
+			<tag>
+				<name>foreach</name>
+				<tag-class></tag-class>
+				<body-content></body-content>
+				<attribute>
+					<name>items</name>
+					<required>true</required>
+					<rtexprvalue>true</rtexprvalue>
+				</attribute>
+				<attribute>
+					<name>var</name>
+					<required>true</required>
+					<rtexprvalue>false</rtexprvalue>
+				</attribute>
+			</tag>
