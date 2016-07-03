@@ -246,3 +246,11 @@ javaBean
 					<rtexprvalue>false</rtexprvalue>
 				</attribute>
 			</tag>
+		转义标签
+			public class HtmlFilterTag extends SimpleTagSupport {
+				public void doTag() throws JspException, IOException{
+					stringWriter sw = new StringWriter();
+					JspFragment jf = this.getJspBody();
+					jf.invoke(sw);
+				}
+			}
