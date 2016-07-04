@@ -254,3 +254,26 @@ javaBean
 					jf.invoke(sw);
 				}
 			}
+
+将自定义标签打成jar包
+	1. 新建java工程，拷贝代码。
+	2. 新建META-INF文件夹
+	3. export 设置jar包名称、存放路径
+
+JSTL 标签
+	c:set 标签
+		<c:set var='data' value='xxx' scope='page'></c:set>
+		${data}
+		<%
+			Map map = new HashMap();
+			request.setAttribute("map", map);
+		%>
+		<c:set property='dd' value='xx' target='${map}'/>
+	
+	c:catch 标签
+		<c:catch var='myex'>
+			<%
+				int x = 1 / 0;
+			%>
+		<c:catch>
+		${myex}
