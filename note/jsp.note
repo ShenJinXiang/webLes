@@ -285,3 +285,16 @@ JSTL 标签
 			%>
 		<c:catch>
 		${myex}
+
+EL表达式
+	隐式对象
+	pageContext		对应jsp页面中的pageContext对象
+	pageScope		代表page域中保存属性的Map对象
+	requestScope	代表request域中保存属性的Map对象
+	sessionScope	代表session域中用于保存属性的Map对象
+	applicationScope	代表application域中保存属性的Map对象
+	param		获取保存了所有请求参数的Map对象
+	header 获取请求头
+		${header['Accept-Language']}
+	cookie 获取cookie
+	initParam		保存所有web应用的初始化参数
