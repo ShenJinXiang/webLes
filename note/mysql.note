@@ -1,0 +1,22 @@
+(SQL)structured query language
+
+创建数据库
+	CREATE DATABASE [IF NOT EXISTS] db_name
+		[create_specification , ...]
+
+		[DEFAULT] CHARACTER SET charset_name
+		[DEFAULT] COLLATE collation_name
+
+	CHARACTER set 字符集	COLLATE 排序方式
+
+查看数据库定义信息
+	show create database db_name;
+
+删除数据库
+	drop database db_name;
+
+备份数据库
+	mysqldump -u 用户名 -p 数据名 > 文件名.sql (window 命令)
+
+恢复数据库
+	source 文件名.sql
