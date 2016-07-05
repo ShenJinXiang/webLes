@@ -254,3 +254,10 @@ javaBean
 					jf.invoke(sw);
 				}
 			}
+	自定义标签的好处：
+		1. 提高开发效率
+		2. 节省开发时间
+		3. 让jsp页面消除java代码
+		封装到自定义标签类中，就像使用jstl标签库一样
+
+		TagSupport BodyTag接口和BodyTagSupport类
