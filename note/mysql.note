@@ -74,6 +74,11 @@ insert语句
 	INSERT INTO table [(column [, column...])] values (value [,value ]);
 	注意 字符串和数字必需用单引号包围
 	设置终端的字符编码
-	show variables like 'chara%';
-	set character_set_client=utf8;
-	set character_set_results=utf8;
+		show variables like 'chara%';
+		set character_set_client=utf8;
+		set character_set_results=utf8;
+	修改配置文件设置字符编码
+		mysql.ini 文件中 修改客户端编码
+
+update语句
+	update 表名 set col_name1=expr1 [, col_name2=expr2...] [where ..];

@@ -39,3 +39,13 @@ alter table user change column name username varchar();
 -- insert 
 -- 添加数据
 insert into `user` (`id`, `username`, `brithday`, `entry_date`, `job`, `salary`, `resume`) values (1, 'aa', '2011-01-23', '2015-12-12', 'web', '1239.12', '一个好人！');
+
+-- update 
+-- 所有员工薪水改为5000元
+update `user` set salary = 5000;
+-- 将姓名为‘zs’的员工的薪水改为3000
+update `user` set salary = 3000 where username = 'zs';
+-- 将姓名为‘aaa’的员工的薪水改为4000元，job改为ccc
+update `user` set salary = 4000 and job = 'ccc' where username='aaa';
+-- 将wu的薪水再原来基础上增加1000元
+update `user` set salary = salary + 1000 where username = 'wu';
