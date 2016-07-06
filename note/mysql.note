@@ -69,3 +69,11 @@
 		alter table 表名 change column 列名 新列名 varchar(20);
 删除表
 	drop table 表名;
+
+insert语句
+	INSERT INTO table [(column [, column...])] values (value [,value ]);
+	注意 字符串和数字必需用单引号包围
+	设置终端的字符编码
+	show variables like 'chara%';
+	set character_set_client=utf8;
+	set character_set_results=utf8;

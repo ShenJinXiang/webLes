@@ -35,3 +35,7 @@ rename table employee to `user`;
 alter table user character set utf8;
 -- 列名name改成username
 alter table user change column name username varchar();
+
+-- insert 
+-- 添加数据
+insert into `user` (`id`, `username`, `brithday`, `entry_date`, `job`, `salary`, `resume`) values (1, 'aa', '2011-01-23', '2015-12-12', 'web', '1239.12', '一个好人！');
