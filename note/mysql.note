@@ -21,3 +21,36 @@
 恢复数据库
 	source 文件名.sql
 	只能恢复数据，没法恢复库
+
+创建表
+	CREATE TABLE table_name (
+		field1 datatype,
+		field2 datatype,
+		field3 datatype,
+	) character set 字符集 collate 校对规则
+
+	数据类型：
+		数值类型：
+			bit 最大为64位 8个字节 默认为1位（0/1）
+			tinyint [unsigned|zerofill]	-128 ~ 127 1个字节
+			bool, boolean  0或1
+			smallint[unsigned|zerofill] 2的16次方 相当于short
+			int [unsigned|zerofill] 2的32次方
+			bigint	2的64次方
+			float(m,d) m指显示长度，d制定小数位数
+			double(m,d) 
+			decimal(m,d) 定点数，存储货币等精度要求高的数据
+		文本、二进制类型：
+			char(size)  如char(20) 定长字符串 size最大为255
+			varchar(size) 如varchar(20)	变长字符串 size最大为65535
+			blob longblob	二进制数据
+			text(clob) longtext(longclob) 大文本
+		时间日期类型：
+			date 日期 YYYY-mm-DD
+			datetime YYYY-mm-DD HH:MM:ss
+			timestamp 时间戳
+
+查看数据库所有表：
+	show tables;
+	show create table table_name;
+	desc table_name;
