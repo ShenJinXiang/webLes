@@ -22,3 +22,16 @@ show tables;
 show create table table_name;
 
 desc table_name;
+
+-- employee 中添加image列
+alter table employee add (`image` blob);
+-- 修改job列 使其长度为60
+alter table employee modify `job` varchar(60);
+-- 删除sex列
+alter table employee drop `sex`; 
+-- 表名改为user
+rename table employee to `user`;
+-- 修改表的字符集为utf8
+alter table user character set utf8;
+-- 列名name改成username
+alter table user change column name username varchar();
