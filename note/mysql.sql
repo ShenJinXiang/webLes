@@ -54,3 +54,11 @@ update `user` set salary = salary + 1000 where username = 'wu';
 delete from `user` where usename = 'zs';
 -- 删除表中所有记录
 delete from `user`;
+
+-- select
+-- 查询所有学生信息
+select * from student;
+-- 查询所有学生的姓名和对应的英语成绩
+select name, english from student;
+-- 过滤重复的英语数据
+select distinct english from student;
