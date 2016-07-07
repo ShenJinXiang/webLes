@@ -49,3 +49,8 @@ update `user` set salary = 3000 where username = 'zs';
 update `user` set salary = 4000 and job = 'ccc' where username='aaa';
 -- 将wu的薪水再原来基础上增加1000元
 update `user` set salary = salary + 1000 where username = 'wu';
+
+-- 删除表中名称为zs的记录
+delete from `user` where usename = 'zs';
+-- 删除表中所有记录
+delete from `user`;
