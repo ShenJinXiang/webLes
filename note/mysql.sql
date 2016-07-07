@@ -62,3 +62,14 @@ select * from student;
 select name, english from student;
 -- 过滤重复的英语数据
 select distinct english from student;
+-- 在所有学生的总分上加10分
+select name, (chinese + english + math) + 10 as s from student;
+-- 查询王五的成绩
+select * from student where `name` = '王五'
+-- 英语成绩在80-90之间的
+select * from student where english >= 80 and english <= 90;
+select * from student where english between 80 and 90;
+-- 查询数学分数是 80 90 91的人
+select * from student where math in ('89', '90', '91');
+-- 查询所有姓李的纪录
+select * from student where name like '李%';
