@@ -111,3 +111,27 @@ select 语句
 	唯一约束	unique
 	非空约束	not null
 	定义外键约束 constraint 名称 foreign key(当前表中的列名) references 外表(外表列名)
+
+数据库表的设计
+	一对多的关系，在多的一方表中定义外键
+	多对多关系
+		create table teacher(
+			id int primary key,
+			name varchar(40),
+			salary decimal(8,2)
+		);
+		create table student(
+			id int primary key,
+			name varchar(40)
+		);
+		create table tesher_student(
+			theacher_id int,
+			student_id int,
+			primary key(teacher_id, student_id),
+			cconstraint teacher_id_FK foreign key(teacher_id) references teacher(id).
+			cconstraint student_id_FK foreign key(student_id) references student(id)
+		);
+	一对一关系
+		主表 和从表
+		从表纪录主表的主键， 外键约束、唯一约束、非空约束
+		或 从表的主键同时是外键
