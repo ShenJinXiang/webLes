@@ -98,3 +98,9 @@ select 语句
 
 	排序
 		order by column asc|desc
+	sum 只对数值有效
+	avg 平均
+	合计函数 max min
+	group by 分组
+	having 过滤 通常跟在group by之后
+	where 子句后边不能跟 sum合计函数

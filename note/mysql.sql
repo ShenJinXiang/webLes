@@ -73,3 +73,17 @@ select * from student where english between 80 and 90;
 select * from student where math in ('89', '90', '91');
 -- 查询所有姓李的纪录
 select * from student where name like '李%';
+
+-- 统计班级语文、英语、数学各科的总成绩
+select sum(chinese + english + math) from student;
+-- 统计一个班级语文成绩的平均分
+select avg(chinese) from student;
+-- 班级总分平均分
+select avg(chinese + english + math) from student;
+-- 班级最高分和最低分
+select max(chinese + english + math), min(chinese + math + english) from student;
+-- 对订单表中商品归类后，显示每一类商品的总价
+select product, sum(price) from orders group by product;
+-- 查询购买了几类商品，并且没类总价大于100的商品
+select product from orders group by product having sum(price)  > 100;
+select product, sum(price) from orders group by product having sum(price)  > 100;
