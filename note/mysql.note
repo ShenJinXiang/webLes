@@ -135,3 +135,36 @@ select 语句
 		主表 和从表
 		从表纪录主表的主键， 外键约束、唯一约束、非空约束
 		或 从表的主键同时是外键
+
+JDBC Java Data Bse Connectivity
+	包： java.sql javax.sql 相应的数据库驱动包
+
+	代码：
+		String url = "jdbc:mysql://localhost:3306/webtest";
+		String username = "root";
+		String password = "root";
+		// 1. 加载驱动
+		DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+
+		// 2. 获取数据库连接
+		Connection conn = DriverManager.getConnection(url, username, password);
+
+		// 3. 获取向数据库发sql语句的statament对象
+		Statement st = conn.createStatement();
+
+		// 4. 向数据库发送sql 获取数据库返回结果
+		ResultSet rs = st.executQuery("select * from users");
+
+		// 5. 从结果集中获取数据
+		while(rs.next()) {
+			rs.getInt(id);
+			rs.getString("name");
+			rs.getString("password");
+			rs.getString("email");
+			rs.getString("brithday");
+		}
+
+		// 6. 释放连接
+		rs.close();
+		st.close();
+		conn.close();
