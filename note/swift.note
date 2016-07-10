@@ -3,3 +3,15 @@
 
 	Int.max / Int.min
 	UInt.max / UInt.min
+
+	swift 没有自动类型转换，如果要转换必需显式类型转换
+
+	Boolean 类型 true false
+
+
+if 语句
+	if后的表达式 可以不加圆括号，但是 后边执行的代码块 必需加 花括号
+
+元组 tuple
+	可以有任意多个值
+	不同的值可以是不同类型
