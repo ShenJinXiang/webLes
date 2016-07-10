@@ -1,0 +1,5 @@
+常用数据类型
+	Int Float Double Boolean String Tuple
+
+	Int.max / Int.min
+	UInt.max / UInt.min
