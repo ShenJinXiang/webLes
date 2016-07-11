@@ -168,3 +168,10 @@ JDBC Java Data Bse Connectivity
 		rs.close();
 		st.close();
 		conn.close();
+	注意：
+		实际开发不建议使用DriverManager.registerDriver();
+		1. driver被加载两次
+		2. 离开jar包，无法编译 
+		采用Class.forName("com.mysql.jdbc.Driver");
+		数据库url场见属性 useUnicode=true&characterEncoding=utf-8
+		oracle: jdbc:oracle:thin:@localhost:1521:sid
