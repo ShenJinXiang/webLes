@@ -5,3 +5,14 @@
 
 	context.save();
 	context.restore();
+
+渐变
+	fillStyle
+		var grd = context.createLinearGradient(xstart, ystart, xend, yend);
+		grd.addColorStop(stop, color);
+
+阴影
+	context.shadowColor			// 阴影颜色
+	context.shadowOffsetX // 阴影的位移值
+	context.shadowOffsetY
+	context.shadowBlur //阴影模糊程度
