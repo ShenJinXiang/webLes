@@ -1,0 +1,7 @@
+图形变换
+	位移 translate(x, y)
+	旋转 rotate(deg)
+	缩放 scale(x, y)
+
+	context.save();
+	context.restore();
