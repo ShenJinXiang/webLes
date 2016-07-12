@@ -196,3 +196,5 @@ JDBC Java Data Bse Connectivity
 			getString(String columnName);
 	释放链接资源
 		Connection的原则：尽量晚创建 尽量早释放 try... finally...
+	
+	增删改查 demo
