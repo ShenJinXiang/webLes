@@ -16,3 +16,13 @@
 	context.shadowOffsetX // 阴影的位移值
 	context.shadowOffsetY
 	context.shadowBlur //阴影模糊程度
+
+文本
+	context.font = "";
+	context.fillText()
+
+	fontStyle
+
+	文本对齐
+		context.textAlign 属性 left center right	// 水平对齐方式
+		context.textBaseline 属性 top middle bottom // 垂直对齐方式
