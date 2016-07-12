@@ -175,3 +175,24 @@ JDBC Java Data Bse Connectivity
 		采用Class.forName("com.mysql.jdbc.Driver");
 		数据库url场见属性 useUnicode=true&characterEncoding=utf-8
 		oracle: jdbc:oracle:thin:@localhost:1521:sid
+	Connection
+		createStatement() 创建向数据库发送sql的statement对象
+		prepareStatement(sql) 创建向数据发送与编译sql的PrepareStatement对象
+		prepareCall(sql) 创建执行存储过程的callableStatement对象
+		setAutoCommit(boolean autoCommit) 设置事务是否自动提交
+		commit() 在链接上提交事务
+		rollback() 在此链接上回滚事务
+	Statement 对象
+		executeQuery(String sql) 向数据库发送查询语句
+		executeUpdate(String sql) 发送insert update delete 返回sql影响数据库的行数
+		execute(sql) 用于发送任意sql 一般不用 返回boolean sql是否执行成功 处理起来比较麻烦
+		addBatch(String sql) 多条sql放在一个批处理中
+		executeBatch() 发送一批sql语句执行
+	ResultSet对象
+		sql语句的执行结果
+			getObject(int index);
+			getObject(String columnName);
+			getString(int index);
+			getString(String columnName);
+	释放链接资源
+		Connection的原则：尽量晚创建 尽量早释放 try... finally...
