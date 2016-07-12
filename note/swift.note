@@ -50,3 +50,17 @@ if 语句
 		for index in 0..<10 {
 			index
 		}
+
+流程控制
+	顺序结构 选择结构 循环结构
+
+循环结构
+	for i in -99...99 {
+		i * i
+	}
+
+	使用 _ 省略循环变量
+	while 循环 适合不知道循环次数的情况
+	repeat... while ..
+	break continue
+
