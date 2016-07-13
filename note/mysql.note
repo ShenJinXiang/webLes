@@ -197,4 +197,9 @@ JDBC Java Data Bse Connectivity
 	释放链接资源
 		Connection的原则：尽量晚创建 尽量早释放 try... finally...
 	
-	增删改查 demo
+链接oracle 
+	修改db.properties
+		driver=oracle.jdbc.driver.OracleDriver
+		url=jdbc:oracle:thin:@localhost:1521:orcl
+		username=system
+		password=
