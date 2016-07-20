@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
+import org.apache.commons.fileupload.ProgressListener;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
@@ -42,6 +43,13 @@ public class UploadServlet extends HttpServlet {
 		ServletFileUpload upload = new ServletFileUpload(factory);
 		
 		try {
+			upload.setProgressListener(new ProgressListener() {
+				
+				@Override
+				public void update(long arg0, long arg1, int arg2) {
+					System.out.println(arg0 + "   " + arg1);
+				}
+			});
 			List<FileItem> list = upload.parseRequest(req);
 			for(FileItem item : list) {
 				if(item.isFormField()) {
@@ -55,7 +63,7 @@ public class UploadServlet extends HttpServlet {
 					int len = 0;
 					byte buffer[] = new byte[1024];
 					while((len = in.read(buffer)) > 0) {
-						System.out.println(new String(buffer, 0, len));
+						
 					}
 				}
 			}
