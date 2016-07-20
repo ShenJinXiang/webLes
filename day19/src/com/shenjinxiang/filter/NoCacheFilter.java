@@ -11,7 +11,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class FilterDemo2 implements Filter {
+public class NoCacheFilter implements Filter {
 
 	@Override
 	public void destroy() {
