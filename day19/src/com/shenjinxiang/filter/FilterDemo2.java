@@ -8,6 +8,8 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class FilterDemo2 implements Filter {
 
@@ -21,15 +23,18 @@ public class FilterDemo2 implements Filter {
 	}
 
 	@Override
-	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		System.out.println("FilterDemo2 before doFilter");
+		HttpServletRequest req = (HttpServletRequest) request;
+		HttpServletResponse resp = (HttpServletResponse) response;
+		resp.setDateHeader("Expires", -1);
+		resp.setHeader("Cache-Control", "no-cache");
+		resp.setHeader("Paragma", "no-cache");
 		chain.doFilter(req, resp);
-		System.out.println("FilterDemo2 after doFilter");
 	}
 
 	@Override
-	public void init(FilterConfig arg0) throws ServletException {
+	public void init(FilterConfig config) throws ServletException {
 		System.out.println("***************************************");
 		System.out.println("---------------------------------------");
 		System.out.println("FilterDemo2 ---------------------  init");
