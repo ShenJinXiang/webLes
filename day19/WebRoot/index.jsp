@@ -12,5 +12,6 @@
 	<label for='password'>用户名</label><input type='password' id='password' name='password' /><br>
 	<input type='submit' value="确定" />
 </form>
+<script src="index.js" ></script>
 </body>
 </html>
