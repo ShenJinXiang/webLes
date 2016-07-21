@@ -31,6 +31,7 @@ public class FileterDemo1 implements Filter {
 		HttpServletResponse resp = (HttpServletResponse) response;
 		req.setCharacterEncoding(config.getInitParameter("encoding"));
 		resp.setCharacterEncoding(config.getInitParameter("encoding"));
+		resp.setContentType("text/html;charset=utf-8");
 		System.out.println("FileterDemo1 before doFilter");
 		System.out.println(req.getRequestURI());
 		chain.doFilter(req, resp);

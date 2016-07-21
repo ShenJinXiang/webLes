@@ -58,6 +58,7 @@ public class GzipFilter implements Filter {
 		
 		private ByteArrayOutputStream bout = new ByteArrayOutputStream();
 		private HttpServletResponse response;
+		private PrintWriter pw;
 
 		public MyResponse(HttpServletResponse response) {
 			super(response);
@@ -71,10 +72,14 @@ public class GzipFilter implements Filter {
 
 		@Override
 		public PrintWriter getWriter() throws IOException {
-			return super.getWriter();
+			pw = new PrintWriter(bout);
+			return pw;
 		}
 		
 		public byte[] getBuffer() {
+			if(pw != null) {
+				pw.close();
+			}
 			return bout.toByteArray();
 		}
 		
