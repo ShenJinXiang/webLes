@@ -11,5 +11,7 @@
 ${username }
 <br>
 ${password }
+<br>
+${text }
 </body>
 </html>

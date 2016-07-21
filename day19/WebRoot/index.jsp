@@ -10,6 +10,7 @@
 <form action="/demo1" method="get">
 	<label for='username'>用户名</label><input type='text' id='username' name='username' /><br>
 	<label for='password'>用户名</label><input type='password' id='password' name='password' /><br>
+	<textarea rows="20" cols="50" name='text'></textarea>
 	<input type='submit' value="确定" />
 </form>
 <script src="index.js" ></script>
