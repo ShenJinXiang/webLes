@@ -31,6 +31,15 @@
   	<filter-name>FileterDemo1</filter-name>
   	<url-pattern>*</url-pattern>
   </filter-mapping>
+
+  <filter>
+  	<filter-name>CharacterFilter</filter-name>
+  	<filter-class>com.shenjinxiang.filter.CharacterFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>CharacterFilter</filter-name>
+  	<url-pattern>*</url-pattern>
+  </filter-mapping>
   
   <filter>
   	<filter-name>NoCacheFilter</filter-name>
@@ -69,4 +78,5 @@
   	<filter-name>CacheFilter</filter-name>
   	<url-pattern>*.jpg</url-pattern>
   </filter-mapping>
+  
 </web-app>
