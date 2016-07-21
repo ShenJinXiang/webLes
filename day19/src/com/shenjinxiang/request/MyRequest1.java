@@ -30,7 +30,5 @@ public class MyRequest1 extends HttpServletRequestWrapper {
 		}
 		return value;
 	}
-	
-	
 
 }
