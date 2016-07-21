@@ -19,6 +19,15 @@
   	<url-pattern>/demo1</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>ServletDemo2</servlet-name>
+  	<servlet-class>com.shenjinxiang.servlet.ServletDemo2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ServletDemo2</servlet-name>
+  	<url-pattern>/demo2</url-pattern>
+  </servlet-mapping>
+  
   <filter>
   	<filter-name>FileterDemo1</filter-name>
   	<filter-class>com.shenjinxiang.filter.FileterDemo1</filter-class>
