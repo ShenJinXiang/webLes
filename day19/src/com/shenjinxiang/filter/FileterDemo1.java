@@ -32,6 +32,7 @@ public class FileterDemo1 implements Filter {
 		req.setCharacterEncoding(config.getInitParameter("encoding"));
 		resp.setCharacterEncoding(config.getInitParameter("encoding"));
 		System.out.println("FileterDemo1 before doFilter");
+		System.out.println(req.getRequestURI());
 		chain.doFilter(req, resp);
 		System.out.println("FileterDemo1 after doFilter");
 	}

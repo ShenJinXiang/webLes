@@ -28,6 +28,15 @@
   	<url-pattern>/demo2</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>ServletDemo3</servlet-name>
+  	<servlet-class>com.shenjinxiang.servlet.ServletDemo3</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>ServletDemo3</servlet-name>
+  	<url-pattern>/demo3</url-pattern>
+  </servlet-mapping>
+  
   <filter>
   	<filter-name>FileterDemo1</filter-name>
   	<filter-class>com.shenjinxiang.filter.FileterDemo1</filter-class>
@@ -96,5 +105,14 @@
   	<filter-name>CacheFilter</filter-name>
   	<url-pattern>*.jpg</url-pattern>
   </filter-mapping>
-  
+  <filter>
+  	<filter-name>GzipFilter</filter-name>
+  	<filter-class>com.shenjinxiang.filter.GzipFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>GzipFilter</filter-name>
+  	<url-pattern>*</url-pattern>
+  	<dispatcher>REQUEST</dispatcher>
+  	<dispatcher>FORWARD</dispatcher>
+  </filter-mapping>
 </web-app>
