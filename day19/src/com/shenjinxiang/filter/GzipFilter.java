@@ -2,6 +2,7 @@ package com.shenjinxiang.filter;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.zip.GZIPOutputStream;
 
@@ -42,7 +43,6 @@ public class GzipFilter implements Filter {
 
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {
-		// TODO Auto-generated method stub
 
 	}
 	
@@ -72,7 +72,7 @@ public class GzipFilter implements Filter {
 
 		@Override
 		public PrintWriter getWriter() throws IOException {
-			pw = new PrintWriter(bout);
+			pw = new PrintWriter(new OutputStreamWriter(bout, this.response.getCharacterEncoding()));
 			return pw;
 		}
 		

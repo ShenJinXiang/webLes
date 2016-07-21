@@ -16,8 +16,9 @@ public class ServletDemo3 extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String data = "123456789abcdefghijklmkopqrstuvwxyzABCDEFGHIJKLMKOPQRSTUVWXYZ<br>申锦祥";
-		resp.getOutputStream().write(data.getBytes("utf-8"));
+		String data = "123456789abcdefghijklmkopqrstuvwxyzABCDEFGHIJKLMKOPQRSTUVWXYZ<br>申锦祥11";
+//		resp.getOutputStream().write(data.getBytes("utf-8"));
+		resp.getWriter().write(data);
 	}
 
 }
