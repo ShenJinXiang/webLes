@@ -22,11 +22,9 @@ public class HTMLFilter implements Filter {
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		System.out.println("brfore htmlfilter");
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse resp = (HttpServletResponse) response;
 		chain.doFilter(new MyRequest(req), resp);
-		System.out.println("after htmlfilter");
 	}
 
 	@Override
@@ -54,7 +52,6 @@ public class HTMLFilter implements Filter {
 		}
 		
 		private String filter(String message) {
-
 	        if (message == null)
 	            return (null);
 
@@ -82,8 +79,6 @@ public class HTMLFilter implements Filter {
 	        return (result.toString());
 
 	    }
-		
-		
 		
 	}
 
