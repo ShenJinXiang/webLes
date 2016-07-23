@@ -10,6 +10,7 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+  <!-- 
   <listener>
   	<listener-class>com.shenjinxiang.listener.MyServletContextListener</listener-class>
   </listener>
@@ -19,4 +20,8 @@
   <listener>
   	<listener-class>com.shenjinxiang.listener.MyRequestListener</listener-class>
   </listener>
+   -->
+   <listener>
+   	<listener-class>com.shenjinxiang.listener.CountNumListener</listener-class>
+   </listener>
 </web-app>
