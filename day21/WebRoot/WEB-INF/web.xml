@@ -24,4 +24,7 @@
    	<listener-class>com.shenjinxiang.listener.CountNumListener</listener-class>
    </listener>
    -->
+   <listener>
+   		<listener-class>com.shenjinxiang.listener.SendMailTimer</listener-class>
+   </listener>
 </web-app>
