@@ -13,13 +13,6 @@ public class CountNumListener implements HttpSessionListener {
 		System.out.println("count : " + count);
 		count = (count == null) ? 1 : count + 1;
 		context.setAttribute("count", count);
-//		if(count == null) {
-//			count = 1;
-//			context.setAttribute("count", count);
-//		} else {
-//			count++;
-//			context.setAttribute("count", count);
-//		}
 		
 	}
 
