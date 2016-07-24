@@ -7,7 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-hello shenjinxiang!!!<br>
-${count }
+<%
+	application.setAttribute("name", "aaa");
+	application.setAttribute("name", "bbb");
+	application.removeAttribute("name");
+
+%>
 </body>
 </html>
