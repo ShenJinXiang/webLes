@@ -8,7 +8,7 @@ import com.shenjinxiang.annotation.MyAnnotation2;
 
 public class Demo6 {
 
-	@MyAnnotation1(gender = Gender.女, ss = { "aa", "bb" })
+//	@MyAnnotation1(gender = Gender.女, ss = { "aa", "bb" })
 	public void test1() {
 		
 	}
@@ -18,7 +18,7 @@ public class Demo6 {
 		System.out.println(Gender.男);
 	}
 	
-	@MyAnnotation2(value = "122")
+	@MyAnnotation1(name = "ZhangSan", age = 18)
 	public void test3() {
 		
 	}

@@ -24,6 +24,7 @@ class MListener implements PersonListener {
 	
 }
 
+
 class Person {
 	private PersonListener listener;
 	public void registerListener(PersonListener listener) {

@@ -2,6 +2,9 @@ package com.shenjinxiang.demo;
 
 import org.junit.Test;
 
+import com.shenjinxiang.annotation.MyAnnotation1;
+import com.shenjinxiang.annotation.MyAnnotation3;
+
 public class Demo5 {
 
 	public <T> void reverse(T arr[]) {
@@ -33,5 +36,10 @@ public class Demo5 {
 			System.out.print(i + "\t");
 		}
 		System.out.println();
+	}
+	
+	@MyAnnotation3("hehe")
+	public void test() {
+		
 	}
 }
