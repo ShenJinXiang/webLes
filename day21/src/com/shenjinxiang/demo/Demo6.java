@@ -15,7 +15,7 @@ public class Demo6 {
 	
 	@Test
 	public void test2(){
-		System.out.println(Gender.男);
+		System.out.println(Gender.MALE);
 	}
 	
 	@MyAnnotation1(name = "ZhangSan", age = 18)
