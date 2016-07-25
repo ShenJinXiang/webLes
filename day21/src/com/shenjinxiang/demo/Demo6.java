@@ -20,6 +20,6 @@ public class Demo6 {
 	
 	@MyAnnotation1(name = "ZhangSan", age = 18)
 	public void test3() {
-		
+		Class clazz = Demo6.class;
 	}
 }
