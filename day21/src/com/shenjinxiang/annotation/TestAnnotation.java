@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface TestAnnotation {
 
-	String name();
+	String name() default "hello";
 	int age();
 	Gender gender();
 }
