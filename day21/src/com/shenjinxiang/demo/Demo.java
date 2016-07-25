@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import com.shenjinxiang.annotation.Gender;
 import com.shenjinxiang.annotation.TestAnnotation;
+import com.shenjinxiang.config.Config;
 
 public class Demo {
 
@@ -38,5 +39,12 @@ public class Demo {
 				System.out.println("gender -> " + gender);
 			}
 		}
+	}
+	
+	@Test
+	public void test2() {
+		System.out.println(Config.NAME);
+		System.out.println(Config.AGE);
+		System.out.println(Config.WORK);
 	}
 }
