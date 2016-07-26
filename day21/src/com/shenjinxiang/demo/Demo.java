@@ -8,6 +8,7 @@ import org.junit.Test;
 import com.shenjinxiang.annotation.Gender;
 import com.shenjinxiang.annotation.TestAnnotation;
 import com.shenjinxiang.config.Config;
+import com.shenjinxiang.entity.Student;
 
 public class Demo {
 
@@ -16,6 +17,9 @@ public class Demo {
 	public void test() throws NoSuchMethodException, SecurityException {
 		Method method = Demo.class.getMethod("test", null);
 		TestAnnotation ta = method.getAnnotation(TestAnnotation.class);
+		Class ac = ta.annotationType();
+		System.out.println(ac.getName());
+		System.out.println(ta);
 		String name  = ta.name();
 		int age = ta.age();
 		Gender gender = ta.gender();
@@ -46,5 +50,21 @@ public class Demo {
 		System.out.println(Config.NAME);
 		System.out.println(Config.AGE);
 		System.out.println(Config.WORK);
+	}
+	
+	@Test
+	public void test3() {
+		Class personClass = com.shenjinxiang.entity.Person.class;
+		Annotation[] pas = personClass.getAnnotations();
+		System.out.println("Person 类的注解有：");
+		for(Annotation anno : pas) {
+			System.out.println(anno.annotationType().getName());
+		}
+		Class studentClass = Student.class;
+		Annotation[] sas = studentClass.getAnnotations();
+		System.out.println("Student 类的注解有：");
+		for(Annotation anno : sas) {
+			System.out.println(anno.annotationType().getName());
+		}
 	}
 }
