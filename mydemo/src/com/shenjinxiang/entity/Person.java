@@ -4,6 +4,20 @@ public class Person {
 
 	private int age;
 	private String name;
+	
+	public Person() {
+		
+	}
+
+	public Person(String name, int age) {
+		this.age = age;
+		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return "Person [age=" + age + ", name=" + name + "]";
+	}
 
 	public int getAge() {
 		return age;
@@ -21,5 +35,9 @@ public class Person {
 		this.name = name;
 	}
 	
+	public static void main(String[] args) {
+		Person p = new Person("刘备", 54);
+		System.out.println(p);
+	}
 	
 }
