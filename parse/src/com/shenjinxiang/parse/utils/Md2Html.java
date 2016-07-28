@@ -4,9 +4,11 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +20,7 @@ public class Md2Html {
 	
 	public static void asHtml(String mdPath) {
 		BufferedReader br = null;
-		BufferedWriter bw = null;
+		OutputStreamWriter os = null;
 		try {
 			File mdFile = new File(mdPath);
 			String fileName = mdFile.getName();
@@ -29,18 +31,18 @@ public class Md2Html {
 				htmlFile.createNewFile();
 			}
 			br = new BufferedReader(new FileReader(mdFile));
-			bw = new BufferedWriter(new FileWriter(htmlFile));
+			os = new OutputStreamWriter(new FileOutputStream(htmlFile), "utf-8");
 			String line = null;
 			List<String> mdList = new ArrayList<String>();
 			while((line = br.readLine()) != null) {
-//				bw.write(handlerHtml(line));
 				mdList.add(line);
 			}
 			List<String> htmlList = getHtml(mdList);
 			for(String html : htmlList) {
-				bw.write(html);
+				os.write(html);
+				
 			}
-			bw.flush();
+			os.flush();
 		} catch (FileNotFoundException e) {
 			System.out.println("md文件未找到");
 		} catch (IOException e) {
@@ -50,12 +52,13 @@ public class Md2Html {
 				try {
 					br.close();
 				} catch (IOException e) {
-					System.out.println("md输入流关闭错误");
+					System.out.println("md关闭错误");
 				}
 			}
-			if(bw != null) {
+			
+			if(os != null) {
 				try {
-					bw.close();
+					os.close();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
@@ -103,6 +106,7 @@ public class Md2Html {
 				status = CodeStatus.UL;
 				return "<ul>\n<li>" + line.trim().substring(1) + "</li>\n";
 			}
+			return line + "\n";
 		} else if(status == CodeStatus.CODE) {
 			if(line.trim().equals("```")) {
 				status = CodeStatus.DEFAULT;
@@ -119,6 +123,6 @@ public class Md2Html {
 			}
 			return "<li>" + line.trim() + "</li>\n";
 		}
-		return "\n";
+		return line + "\n";
 	}
 }
