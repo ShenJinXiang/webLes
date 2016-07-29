@@ -19,32 +19,45 @@ public class SendMail {
 
 	public static void main(String[] args) throws MessagingException {
 		Properties prop = new Properties();
-		prop.setProperty("mail.smtp.host", "smtp.qq.com");
+		prop.setProperty("mail.smtp.host", "smtp.163.com");
 		prop.setProperty("mail.transport.protocol", "smtp");
 		prop.setProperty("mail.smtp.auth", "true");
 		
+		javax.mail.Session session = javax.mail.Session.getInstance(prop);
+		session.setDebug(true);
 		
-		Session session = Session.getInstance(prop);
-		session.setDebug(true);// 打印交互过程
 		Message message = createMessage(session);
-		
-		
 		Transport ts = session.getTransport();
 		ts.connect("", "");
-		ts.sendMessage(message, message.getAllRecipients());
+		ts.sendMessage(message,message.getAllRecipients());
 		ts.close();
 	}
 
-	private static Message createMessage(Session session) throws AddressException, MessagingException {
+	private static Message createMessage(Session session) throws MessagingException {
 		MimeMessage message = new MimeMessage(session);
-		message.setFrom(new InternetAddress("243886005@qq.com"));
-		message.setRecipient(Message.RecipientType.TO, new InternetAddress("sjx-sword@163.com"));
-		message.setSubject("test");
+		message.setFrom(new InternetAddress("sjx-sword@163.com"));
+		message.setRecipient(Message.RecipientType.TO, new InternetAddress(""));
+		message.setSubject("发送图片看看");
 		
-		message.setContent("这是一个好人，测试一下，是不是啊？", "text/html;charset=utf-8");
+		MimeBodyPart textPart = new MimeBodyPart();
+		textPart.setContent("<img src='cid:001.jpg'><br/>", "text/html;charset=utf-8");
+		
+		MimeBodyPart image = new MimeBodyPart();
+		DataHandler dh = new DataHandler(new FileDataSource("src/1.jpg"));    //jaf
+		image.setDataHandler(dh);
+		image.setContentID("001.jpg");
+		
+		MimeMultipart mm = new MimeMultipart();
+		mm.addBodyPart(textPart);
+		mm.addBodyPart(image);
+		mm.setSubType("related");
+		
+		message.setContent(mm);
 		message.saveChanges();
 		
 		return message;
-		
 	}
+	
+	
+
 }

@@ -40,11 +40,11 @@ public class SendMail {
 		//¥¥Ω®” º˛
 		MimeMessage message = new MimeMessage(session);
 		message.setFrom(new InternetAddress("sjx-sword@163.com"));
-		message.setRecipient(Message.RecipientType.TO, new InternetAddress("243886005@qq.com"));
-		message.setSubject("test");
+		message.setRecipient(Message.RecipientType.TO, new InternetAddress(""));
+		message.setSubject("mail_hello");
 		
 		
-		message.setContent("aaaaaaaaaaaa", "text/html");
+		message.setContent("", "text/html;charset=utf-8");
 		message.saveChanges();
 		
 		return message;
