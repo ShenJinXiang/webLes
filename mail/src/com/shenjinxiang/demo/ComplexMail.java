@@ -15,6 +15,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import javax.mail.internet.MimeUtility;
 
 public class ComplexMail {
 
@@ -29,7 +30,8 @@ public class ComplexMail {
 		
 		// 创建bodypart正文
 		MimeBodyPart text = new MimeBodyPart();
-		text.setContent("aaaaa<img src=''>", "text/html");
+//		text.setContent("aaaaa<img src=''>", "text/html");
+		text.setContent("aaaaa<img src=''>", "text/html;charset=utf-8");
 		
 		// 图片
 		MimeBodyPart image = new MimeBodyPart();
@@ -40,7 +42,8 @@ public class ComplexMail {
 		MimeBodyPart attach = new MimeBodyPart();
 		DataHandler dh = new DataHandler(new FileDataSource("src/1.mp3"));
 		attach.setDataHandler(dh);
-		attach.setFileName("1.mp3");
+//		attach.setFileName("1.mp3");
+		attach.setFileName(MimeUtility.encodeText(dh.getName()));
 		
 		MimeMultipart content = new MimeMultipart();
 		content.addBodyPart(text);
