@@ -103,6 +103,8 @@ public class Md2Html {
 			} else if(line.trim().length() >= 2 && line.trim().charAt(0) == '*' && line.trim().charAt(1) != '*') {
 				status = CodeStatus.UL;
 				return "<ul>\n<li>" + line.trim().substring(1) + "</li>\n";
+			} else if(line.trim().length() > 4 && line.trim().startsWith("**") && line.trim().endsWith("**")) {
+				return "<b>" + line.trim().substring(2, line.trim().length() - 2) + "<b>\n";
 			}
 			return line + "\n";
 		} else if(status == CodeStatus.CODE) {
