@@ -7,9 +7,16 @@ public class Demo3 {
 		AA a = new AA();
 		BB b = new BB();
 		c.test1(a);
+		
 	}
 	
+	public static void test(AA a) {
+		System.out.println("a");
+	}
 	
+	public static void test(BB b) {
+		System.out.println("b");
+	}
 }
 
 class AA {
