@@ -1,9 +1,12 @@
 package com.shenjinxiang.blog;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
+import javax.mail.Address;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
@@ -48,6 +51,11 @@ public class SimpleMail {
 		
 		// 收件人
 		message.setRecipient(Message.RecipientType.TO, new InternetAddress("***@qq.com"));
+		List<Address> addList = new ArrayList<Address>();
+		addList.add(new InternetAddress(""));
+		addList.add(new InternetAddress(""));
+		addList.add(new InternetAddress(""));
+		message.setRecipients(Message.RecipientType.TO, addList.toArray(new Address[0]));
 		
 		// 邮件标题
 		message.setSubject("附带一张图片");
