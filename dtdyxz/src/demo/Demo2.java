@@ -10,9 +10,10 @@ public class Demo2 {
 
 	public static void main(String[] args) throws IOException {
 //		String msg = "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiID8+DQo8cmVzcG9uc2VfZG93bmxvYWQ+CiAgPGZwZG0+MTIzNDU2PC9mcGRtPgogIDxmcGhtPjEyMzQ1NjwvZnBobT4KICA8a3BycT7lvD/npajml6XmnD88L2twcnE+CiAgPHBkZl9maWxlPjwvcGRmX2ZpbGU+CiAgPHJldHVybmNvZGU+OTEzNjwvcmV0dXJuY29kZT4KICA8cmV0dXJubXNnPlBERiC159fTt6LGsdX91NrJ+rL6u/IgUERGILXn19O3osaxx+vH88r9vt207c7zPC9yZXR1cm5tc2c+CjwvcmVzcG9uc2VfZG93bmxvYWQ+";
-//		String result = new String(new BASE64Decoder().decodeBuffer(msg), "utf-8");
-//		System.out.println(result);
-		test1();
+		String msg = "5pWw5o2u57G75Z6L5oiW5qC85byP5LiN5ZCI5rOVLOivt+axguWkhOeQhuWksei0pSE=";
+		String result = new String(new BASE64Decoder().decodeBuffer(msg), "utf-8");
+		System.out.println(result);
+//		test1();
 	}
 	
 	public static void test1() throws IOException {
