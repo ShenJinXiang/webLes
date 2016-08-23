@@ -22,6 +22,142 @@ public class Demo1 {
 		System.out.println(result);
 	}
 	
+	public static String getXML3(){
+		String content = 
+				"<REQUEST_FPQZ class=\"REQUEST_FPQZ\">"+
+				"  <FPQZ_INFO>U0pMWQIwNgNGUExYAjE=</FPQZ_INFO>"+
+				"  <FPQZ_FPT class=\"FPQZ_FPT\">"+
+				"    <FPQQLSH>0822i1uu9u6wt5676899</FPQQLSH>"+
+				"    <KPLX>0</KPLX>"+
+				"    <BMB_BBH>1.0</BMB_BBH>"+
+				"    <QD_BZ>0</QD_BZ>"+
+				"    <QDXMMC></QDXMMC>"+
+				"    <XSF_NSRSBH>110101MXB6CK9Q6</XSF_NSRSBH>"+
+				"    <XSF_MC>xxx股份有限公司</XSF_MC>"+
+				"    < XSF_DZDH>北京010-001201</ XSF_DZDH>"+
+				"    <XSF_YHZH>622001281291921</XSF_YHZH>"+
+				"    <GMF_NSRSBH>110101MXB6CK9Q6</GMF_NSRSBH>"+
+				"    <GMF_MC>xxx有限公司</GMF_MC>"+
+				"    <GMF_DZDH>北京010-100121</GMF_DZDH>"+
+				"    <KPR>开票人</KPR>"+
+				"    <SKR>收款人</SKR>"+
+				"    <FHR>复核人</FHR>"+
+				"    <YFP_DM></YFP_DM>"+
+				"    <YFP_HM></YFP_HM>"+
+				"    <JSHJ>58.5</JSHJ>"+
+				"    <HJJE>50.0</HJJE>"+
+				"    <HJSE>8.5</HJSE>"+
+				"    <BZ>备注</BZ>"+
+				"    <FPZT>0</FPZT>"+
+				"    <JQBH>661545614617</JQBH>"+
+				"    <FP_DM>740919010911</FP_DM>"+
+				"    <FP_HM>95943801</FP_HM>"+
+				"    <KPRQ>20160815183131000</KPRQ>"+
+				"    <FP_MW>07&gt;&gt;5792&gt;45-61&lt;-&lt;9&gt;7010&lt;1-7&lt;*+-9&lt;/1532*76&lt;6-*9425*953&lt;*4&lt;+12510673&lt;&lt;8&lt;4&lt;288&gt;35070&lt;1-7&lt;537*65257+*/6-6-*923&gt;*</FP_MW>"+
+				"    <JYM>74266495272087899951</JYM>"+
+				"    <PDF_XZFS>3</PDF_XZFS>"+
+				"  </FPQZ_FPT>"+
+				"  <FPQZ_XMXXS class=\"FPQZ_XMXX;\" size=\"2\">"+
+				"    <FPQZ_XMXX>"+
+				"      <XMMC>打印机</XMMC>"+
+				"      <GGXH>台</GGXH>"+
+				"      <DW>台</DW>"+
+				"      <XMSL>1.0</XMSL>"+
+				"      <XMDJ>100.0</XMDJ>"+
+				"      <XMJE>100.0</XMJE>"+
+				"      <SL>0.17</SL>"+
+				"      <SE>17.0</SE>"+
+				"      <HSBZ>1</HSBZ>"+
+				"      <FPHXZ>2</FPHXZ>"+
+				"      <SPBM>001201</SPBM>"+
+				"      <YHZCBS>0</YHZCBS>"+
+				"      <KCE></KCE>"+
+				"    </FPQZ_XMXX>"+
+				"    <FPQZ_XMXX>"+
+				"      <XMMC>电脑</XMMC>"+
+				"      <GGXH>台</GGXH>"+
+				"      <DW>台</DW>"+
+				"      <XMSL>1.0</XMSL>"+
+				"      <XMDJ>-50.0</XMDJ>"+
+				"      <XMJE>-20.0</XMJE>"+
+				"      <SL>0.17</SL>"+
+				"      <SE>-8.5</SE>"+
+				"      <HSBZ>1</HSBZ>"+
+				"      <FPHXZ>1</FPHXZ>"+
+				"      <SPBM>001201</SPBM>"+
+				"      <YHZCBS>0</YHZCBS>"+
+				"      <KCE></KCE>"+
+				"    </FPQZ_XMXX>"+
+				"  </FPQZ_XMXXS>"+
+				"</REQUEST_FPQZ>";
+		String xml = 
+		"<?xml version=\"1.0\" encoding=\"UTF-8\" ?>" +
+		"<interface>" +
+		"  <globalInfo>" +
+		"    <terminalCode>0</terminalCode>" +
+		"    <appId>A16D8DBD18EDDD80</appId>" +
+		"    <version>2</version>" +
+		"    <interfaceCode>ECXML.FPQZ.BC.E.INV</interfaceCode>" +
+		"    <userName>14410101</userName>" +
+		"    <passWord>0981202609xFBzKNdCxSuCZP2TjDD2fA==</passWord>" +
+		"    <taxpayerId>110101MXB6CK9Q6</taxpayerId>" +
+		"    <authorizationCode>6270892641</authorizationCode>" +
+		"    <requestCode>14410101</requestCode>" +
+		"    <requestTime>2015-08-06 10:30:42 978</requestTime>" +
+		"    <responseCode>144</responseCode>" +
+		"    <dataExchangeId>P0000001ECXML.FPKJ.BC.E_INV20150807eXl4EymmJ</dataExchangeId>" +
+		"  </globalInfo>" +
+		"  <returnStateInfo>" +
+		"    <returnCode></returnCode>" +
+		"    <returnMessage></returnMessage>" +
+		"  </returnStateInfo>" +
+		"  <Data>" +
+		"    <dataDescription>" +
+		"      <zipCode>0</zipCode>" +
+		"      <encryptCode>0</encryptCode>" +
+		"      <codeType>0</codeType>" +
+		"    </dataDescription>" +
+		"    <content>" + new BASE64Encoder().encode(content.getBytes()) + "</content>" +
+		"  </Data>" +
+		"</interface>";
+		
+		return xml;
+	}
+	
+	public static String getXML2() {
+		
+		String xml = 
+				"<?xml version='1.0' encoding='utf-8' ?> "+
+		"<interface xmlns='' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.chinatax.gov.cn/tirip/dataspec/interfaces.xsd' version='DZFP1.0' >" +
+		"	<globalInfo>" +
+		"		<terminalCode>0</terminalCode>" +
+		"		<appId>A16D8DBD18EDDD80</appId>" +
+		"		<version>2</version>" +
+		"		<interfaceCode>ECXML.FPQZ.BC.E.INV</interfaceCode>" +
+		"		<requestCode>14410101</requestCode>" +
+		"		<requestTime>2015-08-06 10:30:42 978</requestTime>" +
+		"		<responseCode>144</responseCode>" +
+		"		<dataExchangeId>P0000001ECXML.FPKJ.BC.E_INV20150807eXl4EymmJ</dataExchangeId>" +
+		"		<userName>14410101</userName>" +
+		"		<passWord>0981202609xFBzKNdCxSuCZP2TjDD2fA==</passWord>" +
+		"		<taxpayerId>110101MXB6CK9Q6</taxpayerId>" +
+		"		<authorizationCode>6270892641</authorizationCode>" +
+		"	</globalInfo>" +
+		"	<returnStateInfo>" +
+		"		<returnCode />" +
+		"		<returnMessage />" +
+		"	</returnStateInfo>" +
+		"	<Data>" +
+		"		<dataDescription>" +
+		"		<zipCode>0</zipCode>" +
+		"		<encryptCode>0</encryptCode>" +
+		"		<codeType>0</codeType>" +
+		"		</dataDescription>" +
+		"		<content>" + "</content>" +
+		"	</Data>" +
+		"</interface>";
+		return xml;
+	}
 	public static String getXML1() {
 		String content ="<REQUEST_FPQZ class='REQUEST_FPQZ'>" +
 				  "<FPQZ_INFO>U0pMWQIwNgNGUExYAjE=</FPQZ_INFO>" +
@@ -96,58 +232,58 @@ public class Demo1 {
 					  "<ZZSTSGL></ZZSTSGL>" +
 				    "</FPQZ_XMXX>" +
 				  "</FPQZ_XMXXS>" +
-				  "<FPQZ_TSFSXX class='FPQZ_TSFSXX'>" +
-				    "<COMMON_NODES class='COMMON_NODE;' size='4'>" +
-				      "<COMMON_NODE> " +
-				        "<NAME>TSFS</NAME>  " +
-				        "<VALUE>推送方式</VALUE> " +
-				      "</COMMON_NODE>  " +
-				      "<COMMON_NODE> " +
-				        "<NAME>SJ</NAME>  " +
-				        "<VALUE>手机</VALUE> " +
-				      "</COMMON_NODE>  " +
-				      "<COMMON_NODE> " +
-				        "<NAME>EMAIL</NAME>  " +
-				        "<VALUE>邮箱</VALUE> " +
-				      "</COMMON_NODE>  " +
-				      "<COMMON_NODE> " +
-				        "<NAME>扩展字段名称</NAME>" +
-				        "<VALUE>扩展字段值</VALUE> " +
-				      "</COMMON_NODE> " +
-				    "</COMMON_NODES> " +
-				  "</FPQZ_TSFSXX> " +
+//				  "<FPQZ_TSFSXX class='FPQZ_TSFSXX'>" +
+//				    "<COMMON_NODES class='COMMON_NODE;' size='4'>" +
+//				      "<COMMON_NODE> " +
+//				        "<NAME>TSFS</NAME>  " +
+//				        "<VALUE>推送方式</VALUE> " +
+//				      "</COMMON_NODE>  " +
+//				      "<COMMON_NODE> " +
+//				        "<NAME>SJ</NAME>  " +
+//				        "<VALUE>手机</VALUE> " +
+//				      "</COMMON_NODE>  " +
+//				      "<COMMON_NODE> " +
+//				        "<NAME>EMAIL</NAME>  " +
+//				        "<VALUE>邮箱</VALUE> " +
+//				      "</COMMON_NODE>  " +
+//				      "<COMMON_NODE> " +
+//				        "<NAME>扩展字段名称</NAME>" +
+//				        "<VALUE>扩展字段值</VALUE> " +
+//				      "</COMMON_NODE> " +
+//				    "</COMMON_NODES> " +
+//				  "</FPQZ_TSFSXX> " +
 				"</REQUEST_FPQZ>";
 
-		String xml = "<?xml version='1.0' encoding='utf-8' ?>" +
-				"<interface xmlns='' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.chinatax.gov.cn/tirip/dataspec/interfaces.xsd' version='DZFP1.0' >" +
-				"<globalInfo>" +
-					"<terminalCode>0</terminalCode>" +
-					"<appId>A16D8DBD18EDDD80</appId>" +
-					"<version>2</version>" +
-					"<interfaceCode>ECXML.FPQZ.BC.E.INV</interfaceCode>" +
-					"<requestCode>14410101</requestCode>" +
-					"<requestTime>2015-08-06 10:30:42 978</requestTime>" +
-					"<responseCode>144</responseCode>" +
-					"<dataExchangeId>P0000001ECXML.FPKJ.BC.E_INV20150807eXl4EymmJ</dataExchangeId>"
+		String xml = "<?xml version='1.0' encoding='utf-8' ?>\n" +
+				"<interface >\n" +
+				"<globalInfo>\n" +
+					"<terminalCode>0</terminalCode>\n" +
+					"<appId>A16D8DBD18EDDD80</appId>\n" +
+					"<version>2</version>\n" +
+					"<interfaceCode>ECXML.FPQZ.BC.E.INV</interfaceCode>\n" +
+					"<requestCode>14410101</requestCode>\n" +
+					"<requestTime>2015-08-06 10:30:42 978</requestTime>\n" +
+					"<responseCode>144</responseCode>\n" +
+					"<dataExchangeId>P0000001ECXML.FPKJ.BC.E_INV20150807eXl4EymmJ</dataExchangeId>\n"
 					+
-					"<userName>14410101</userName>" +
-					"<passWord>0981202609xFBzKNdCxSuCZP2TjDD2fA==</passWord>" +
-					"<taxpayerId>110101MXB6CK9Q6</taxpayerId>" +
-					"<authorizationCode>6270892641</authorizationCode>" +
-				"</globalInfo>" +
-				"<returnStateInfo>" +
-					"<returnCode />" +
-					"<returnMessage />" +
-					"</returnStateInfo>" +
-				"<Data>" +
-					"<dataDescription>" +
-						"<zipCode>0</zipCode>" +
-						"<encryptCode>0</encryptCode>" +
-						"<codeType>0</codeType>" +
-					"</dataDescription>" +
-					"<content>" + new BASE64Encoder().encode(content.getBytes()) +"</content>" +
-				"</Data>" +
-			"</interface>";
+					"<userName>14410101</userName>\n" +
+					"<passWord>0981202609xFBzKNdCxSuCZP2TjDD2fA==</passWord>\n" +
+					"<taxpayerId>110101MXB6CK9Q6</taxpayerId>\n" +
+					"<authorizationCode>6270892641</authorizationCode>\n" +
+				"</globalInfo>\n" +
+				"<returnStateInfo>\n" +
+					"<returnCode />\n" +
+					"<returnMessage />\n" +
+					"</returnStateInfo>\n" +
+				"<Data>\n" +
+					"<dataDescription>\n" +
+						"<zipCode>0</zipCode>\n" +
+						"<encryptCode>0</encryptCode>\n" +
+						"<codeType>0</codeType>\n" +
+					"</dataDescription>\n" +
+					"<content>" + new BASE64Encoder().encode(content.getBytes()) +"</content>\n" +
+				"</Data>\n" +
+			"</interface>\n";
 		return xml;
 		
 	}

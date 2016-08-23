@@ -24,8 +24,13 @@ public class Demo1 implements Runnable {
 	@Override
 	public void run() {
 		for(int i = 0; i < 100; i++){
-			System.out.println(this.name + " " + i);
+			System.out.println("名称：" + this.name + "  循环次数： " + i);
 		} 
+		try {
+			Thread.sleep(1000 * 1);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		System.out.println(this.name + " 结束了");
 	}
 

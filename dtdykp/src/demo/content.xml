@@ -1,0 +1,73 @@
+<dzfp_info>
+	<dzfp_fpt>
+		<billno>单据号</billno>
+		<billdate>单据日期</billdate>
+		<invcode>要开具的电子发票代码</invcode>
+		<number>要开具的电子发票号码</number>
+		<fpqqlsh>发票请求流水号</fpqqlsh>
+		<fplx>发票类型</fplx>
+		<kplx>开票类型</kplx>
+		<xsf_nsrsbh >销方纳税人识别号</xsf_nsrsbh >
+		<xsf_mc>销方名称</xsf_mc>
+		<xsf_dzdh>销方地址 电话</xsf_dzdh>
+		<xsf_yhzh>销方开户银行 银行账号</xsf_yhzh>
+		<xsf_email>销方邮箱地址</xsf_email>
+		<xsf_phone>销方移动电话</xsf_phone>
+		<gmf_nsrsbh>购方纳税人识别号</gmf_nsrsbh>
+		<gmf_mc>购方名称</gmf_mc>
+		<gmf_dzdh>购方地址 电话</gmf_dzdh>
+		<gmf_yhzh>购方开户银行 银行账号</gmf_yhzh>
+		<gmf_email>购方邮箱地址</gmf_email>
+		<gmf_phone>购方移动电话</gmf_phone>
+		<kpr>开票人</kpr>
+		<skr>收款人</skr>
+		<fhr>复核人</fhr>
+		<yfp_dm>原发票代码</yfp_dm>
+		<yfp_hm>原发票号码</yfp_hm>
+		<jshj>价税合计</jshj>
+		<hjje>合计金额(不含税)</hjje>
+		<hjse>合计税额</hjse>
+		<bz>备注</bz>
+		<hsbz>含税标志</hsbz>
+	</dzfp_fpt>
+	<dzfp_fpmx>
+		<fpmx>
+			<fphxz>发票行性质</fphxz>
+			<xmmc>项目名称</xmmc>
+			<ggxh>规格型号</ggxh>
+			<dw>单位</dw>
+			<xmsl>项目数量</xmsl>
+			<xmdj>项目单价</xmdj>
+			<xmje>项目金额</xmje>
+			<sl>税率</sl>
+			<se>税额</se>
+			<fpcominput>更新编码信息接口业务标示(固定1100)</fpcominput>
+			<goodsnover>编码版本号</goodsnover>
+			<goodstaxno>税收分类编码 </goodstaxno>
+			<taxpre>是否享受优惠政策(0:不享受  1:享受) </taxpre>
+			<taxprecon>享受优惠政策内容 </taxprecon>
+			<zerotax>零税率标识(空:非零税率 ；0:出口退税；1:免税；2:不征收；3:普通零税率) </zerotax>
+			<cropgoodsno>企业自编码 </cropgoodsno>
+			<taxdeduction>扣除额</taxdeduction>
+		</fpmx>
+		<fpmx>
+			<fphxz>发票行性质</fphxz>
+			<xmmc>项目名称</xmmc>
+			<ggxh>规格型号</ggxh>
+			<dw>单位</dw>
+			<xmsl>项目数量</xmsl>
+			<xmdj>项目单价</xmdj>
+			<xmje>项目金额</xmje>
+			<sl>税率</sl>
+			<se>税额</se>
+			<fpcominput>更新编码信息接口业务标示(固定1100)</fpcominput>
+			<goodsnover>编码版本号</goodsnover>
+			<goodstaxno>税收分类编码 </goodstaxno>
+			<taxpre>是否享受优惠政策(0:不享受  1:享受) </taxpre>
+			<taxprecon>享受优惠政策内容 </taxprecon>
+			<zerotax>零税率标识(空:非零税率 ；0:出口退税；1:免税；2:不征收；3:普通零税率) </zerotax>
+			<cropgoodsno>企业自编码 </cropgoodsno>
+			<taxdeduction>扣除额</taxdeduction>
+		</fpmx>
+	</dzfp_fpmx>
+</dzfp_info>

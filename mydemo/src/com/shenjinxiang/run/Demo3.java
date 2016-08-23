@@ -39,7 +39,8 @@ public class Demo3 {
 		ThreadPool.getThread().execute(new Demo1("x"));
 		ThreadPool.getThread().execute(new Demo1("y"));
 		ThreadPool.getThread().execute(new Demo1("z"));
+		ThreadPool.getThread().shutdown();
 	}
 	
-	// 0 5 4 6 8 3 9 10 7 16 2 15 14 12 13 1 11
+	// 0 1 9 8 7 6 5 4 3 2 
 }

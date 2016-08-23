@@ -7,7 +7,7 @@ public class Demo2 {
 		B b = new B();
 		C c = new C();
 		D d = new D();
-//		System.out.println(a2.show(b));
+		System.out.println(a2.show(b));
 		System.out.println(b.show(c));
 		System.out.println(b.show(d));
 	}

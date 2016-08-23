@@ -15,15 +15,15 @@ public class Demo1 {
 		String xml = getXzXml();
 		Coreservice service = new CoreserviceLocator();
 		CoreservicePortType cpt = service.getcoreserviceHttpPort();
-		String result = cpt.handler(xml);
+		String result = cpt.invoke(xml);
 		System.out.println(result);
 	}
 	
 	public static String getXzXml() {
 		String content =
 				"<dzfp_download>" +
-				"<fpdm>123456</fpdm>" +
-				"<fphm>123456</fphm>" +
+				"<fpdm>1400083620</fpdm>" +
+				"<fphm>00347704</fphm>" +
 				"<kprq>开票日期</kprq>" +
 				"</dzfp_download>";
 

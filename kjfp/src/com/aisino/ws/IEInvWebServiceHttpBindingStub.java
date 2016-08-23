@@ -1,13 +1,13 @@
 /**
- * CoreserviceHttpBindingStub.java
+ * IEInvWebServiceHttpBindingStub.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package coreservice_pkg;
+package com.aisino.ws;
 
-public class CoreserviceHttpBindingStub extends org.apache.axis.client.Stub implements coreservice_pkg.CoreservicePortType {
+public class IEInvWebServiceHttpBindingStub extends org.apache.axis.client.Stub implements com.aisino.ws.IEInvWebServicePortType {
     private java.util.Vector cachedSerClasses = new java.util.Vector();
     private java.util.Vector cachedSerQNames = new java.util.Vector();
     private java.util.Vector cachedSerFactories = new java.util.Vector();
@@ -24,29 +24,29 @@ public class CoreserviceHttpBindingStub extends org.apache.axis.client.Stub impl
         org.apache.axis.description.OperationDesc oper;
         org.apache.axis.description.ParameterDesc param;
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("invoke");
-        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("coreservice", "in0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
+        oper.setName("eiInterface");
+        param = new org.apache.axis.description.ParameterDesc(new javax.xml.namespace.QName("http://ws.aisino.com", "in0"), org.apache.axis.description.ParameterDesc.IN, new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"), java.lang.String.class, false, false);
         param.setNillable(true);
         oper.addParameter(param);
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         oper.setReturnClass(java.lang.String.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("coreservice", "out"));
+        oper.setReturnQName(new javax.xml.namespace.QName("http://ws.aisino.com", "out"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
         _operations[0] = oper;
 
     }
 
-    public CoreserviceHttpBindingStub() throws org.apache.axis.AxisFault {
+    public IEInvWebServiceHttpBindingStub() throws org.apache.axis.AxisFault {
          this(null);
     }
 
-    public CoreserviceHttpBindingStub(java.net.URL endpointURL, javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
+    public IEInvWebServiceHttpBindingStub(java.net.URL endpointURL, javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
          this(service);
          super.cachedEndpoint = endpointURL;
     }
 
-    public CoreserviceHttpBindingStub(javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
+    public IEInvWebServiceHttpBindingStub(javax.xml.rpc.Service service) throws org.apache.axis.AxisFault {
         if (service == null) {
             super.service = new org.apache.axis.client.Service();
         } else {
@@ -88,7 +88,7 @@ public class CoreserviceHttpBindingStub extends org.apache.axis.client.Stub impl
         }
     }
 
-    public java.lang.String invoke(java.lang.String in0) throws java.rmi.RemoteException {
+    public java.lang.String eiInterface(java.lang.String in0) throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -100,7 +100,7 @@ public class CoreserviceHttpBindingStub extends org.apache.axis.client.Stub impl
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("coreservice", "invoke"));
+        _call.setOperationName(new javax.xml.namespace.QName("http://ws.aisino.com", "eiInterface"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
