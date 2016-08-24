@@ -1,5 +1,9 @@
 package demo;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.rmi.RemoteException;
 
 import javax.xml.rpc.ServiceException;
@@ -11,12 +15,16 @@ import sun.misc.BASE64Encoder;
 
 public class Demo1 {
 
-	public static void main(String[] args) throws ServiceException, RemoteException {
+	public static void main(String[] args) throws ServiceException, IOException {
 		String xml = getXzXml();
 		Coreservice service = new CoreserviceLocator();
 		CoreservicePortType cpt = service.getcoreserviceHttpPort();
 		String result = cpt.invoke(xml);
 		System.out.println(result);
+		FileOutputStream fos = new FileOutputStream(new File("xz.txt"));
+		fos.write(result.getBytes());
+		fos.flush();
+		fos.close();
 	}
 	
 	public static String getXzXml() {
@@ -40,8 +48,8 @@ public class Demo1 {
 				"<requestTime>数据交换请求方发出时间</requestTime>" +
 				"<responseCode>数据交换请求接收方代码</responseCode>" +
 				"<dataExchangeId>数据交换流水号</dataExchangeId>" +
-				"<kpddm>开票点代码</kpddm>" +
-				"<kpdmc>开票点名称</kpdmc>" +
+				"<kpddm>kpd04</kpddm>" +
+				"<kpdmc>开票点4</kpdmc>" +
 				"</globalInfo>" +
 				"<data>" +
 				"<content>" + new BASE64Encoder().encode(content.getBytes()) + "</content>" +
