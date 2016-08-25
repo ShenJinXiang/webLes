@@ -60,8 +60,8 @@ public class XzDemo {
 				"		<requestTime>2016-08-16 17:54:22 231</requestTime>\r\n" +
 				"		<responseCode>155</responseCode>\r\n" +
 				"		<dataExchangeId>124578</dataExchangeId>\r\n" +
-				"		<kpddm>kpd04</kpddm>\r\n" +
-				"		<kpdmc>开票点4</kpdmc>\r\n" +
+				"		<kpddm>111</kpddm>\r\n" +
+				"		<kpdmc>111</kpdmc>\r\n" +
 				"	</globalInfo>\r\n" +
 				"	<returnStateInfo>\r\n"+
 				"		<returnCode/>\r\n" +
