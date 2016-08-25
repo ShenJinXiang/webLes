@@ -41,11 +41,11 @@ public class XzDemo {
 
 	private static String getXML() throws UnsupportedEncodingException {
 		String content =
-				"<dzfp_download>" +
-				"<fpdm>1400083620</fpdm>" +
-				"<fphm>00347704</fphm>" +
-				"<kprq>开票日期</kprq>" +
-				"</dzfp_download>";
+				"<dzfp_download>\r\n" +
+				"<fpdm>1400083620</fpdm>\r\n" +
+				"<fphm>00347704</fphm>\r\n" +
+				"<kprq></kprq>\r\n" +
+				"</dzfp_download>\r\n";
 
 		String invoice_Open_xml = 
 				"<?xml version='1.0' encoding='utf-8' ?>\r\n" +
@@ -63,10 +63,10 @@ public class XzDemo {
 				"		<kpddm>kpd04</kpddm>\r\n" +
 				"		<kpdmc>开票点4</kpdmc>\r\n" +
 				"	</globalInfo>\r\n" +
-				"	<returnStateInfo>"+
-				"		<returnCode/>" +
-				"		<returnMessage/>" +
-				"	</returnStateInfo>"+
+				"	<returnStateInfo>\r\n"+
+				"		<returnCode/>\r\n" +
+				"		<returnMessage/>\r\n" +
+				"	</returnStateInfo>\r\n"+
 				"	<data>\r\n" +
 				"		<content>" + new BASE64Encoder().encode(content.getBytes("utf-8")) + "</content>\r\n" +
 				"	</data>\r\n" +

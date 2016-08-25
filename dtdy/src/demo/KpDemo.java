@@ -16,10 +16,11 @@ public class KpDemo {
 		Coreservice service = new CoreserviceLocator();
 		CoreservicePortType pt = service.getcoreserviceHttpPort();
 		String result = pt.invoke(xml);
-		System.out.println(result);	// 返回报文
+		System.out.println("-----------------返回报文---------------------");
+		System.out.println(result);
 		// 返回报文中的content的内容
 		String content = result.substring(result.indexOf("<content>") + "<content>".length(), result.indexOf("</content>"));
-		
+		System.out.println("------------------返回的内层报文-----------------------");
 		System.out.println(new String(new BASE64Decoder().decodeBuffer(content)));
 	}
 	
@@ -31,7 +32,7 @@ public class KpDemo {
 			"		<billdate>2016-08-15 15:23:55 456</billdate>\r\n" +
 			"		<invcode>123456789142</invcode>\r\n" +
 			"		<number>65432178</number>\r\n" +
-			"		<fpqqlsh>d1231k2578</fpqqlsh>\r\n" +
+			"		<fpqqlsh>kpd0411111234</fpqqlsh>\r\n" +
 			"		<fplx>0</fplx>\r\n" +
 			"		<kplx>0</kplx>\r\n" +
 			"		<xsf_nsrsbh >140114999999062</xsf_nsrsbh >\r\n" +
@@ -111,8 +112,8 @@ public class KpDemo {
 			"		<requestTime>2016-08-16 17:54:22 231</requestTime>\r\n" +
 			"		<responseCode>155</responseCode>\r\n" +
 			"		<dataExchangeId>124578</dataExchangeId>\r\n" +
-			"		<kpddm>kpd04</kpddm>\r\n" +
-			"		<kpdmc>开票点4</kpdmc>\r\n" +
+			"		<kpddm>111</kpddm>\r\n" +
+			"		<kpdmc>111</kpdmc>\r\n" +
 			"	</globalInfo>\r\n" +
 			"	<returnStateInfo>"+
 			"		<returnCode/>" +
