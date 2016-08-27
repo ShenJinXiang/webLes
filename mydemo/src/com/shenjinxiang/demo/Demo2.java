@@ -1,5 +1,6 @@
 package com.shenjinxiang.demo;
 
+<<<<<<< HEAD
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -68,3 +69,41 @@ public class Demo2 {
 		return new String(cs);
 	}
 }
+=======
+public class Demo2 {
+	public static void main(String[] args) {
+		A a1 = new A();
+		A a2 = new B();
+		B b = new B();
+		C c = new C();
+		D d = new D();
+		System.out.println(a2.show(b));
+		System.out.println(b.show(c));
+		System.out.println(b.show(d));
+	}
+}
+
+class A {
+	public String show(D obj) {
+		return ("A and D");
+	}
+	
+	public String show(A obj) {
+		return ("A and A");
+	}
+}
+
+class B extends A{
+	public String show(B obj) {
+		return ("B and B");
+	}
+	
+	public String show(A obj) {
+		return ("B and A");
+	}
+}
+
+class C extends B{}
+
+class D extends B{}
+>>>>>>> ecf078ba0d7df2a9e6cb614993a871dd7fe98a2a

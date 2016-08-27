@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<interface xmlns='' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://www.chinatax.gov.cn/tirip/dataspec/interfaces.xsd' version='DZFP1.0' >
+	<globalInfo>
+		<terminalCode>0</terminalCode>
+		<appId>A16D8DBD18EDDD80</appId>
+		<version>2</version>
+		<interfaceCode>ECXML.FPQZ.BC.E.INV</interfaceCode>
+		<userName>14410101</userName>
+		<passWord>0981202609xFBzKNdCxSuCZP2TjDD2fA==</passWord>
+		<taxpayerId>110101MXB6CK9Q6</taxpayerId>
+		<authorizationCode>6270892641</authorizationCode>
+		<requestCode>14410101</requestCode>
+		<requestTime>2015-08-06 10:30:42 978</requestTime>
+		<responseCode>144</responseCode>
+		<dataExchangeId>P0000001ECXML.FPKJ.BC.E_INV20150807eXl4EymmJ</dataExchangeId>
+	</globalInfo>
+	<returnStateInfo>
+		<returnCode />
+		<returnMessage />
+		</returnStateInfo>
+	<Data>
+		<dataDescription>
+			<zipCode>0</zipCode>
+			<encryptCode>0</encryptCode>
+			<codeType>0</codeType>
+		</dataDescription>
+		<content></content>
+	</Data>
+</interface>

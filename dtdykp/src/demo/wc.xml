@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<invoice_open>
+	<globalInfo>
+		<interfaceCode>接口编码</interfaceCode>
+		<username>平台编码</username>
+		<password>10位随机数+Base64({(10位随机数+注册码) MD5})</password>
+		<taxpayerId>纳税人识别号</taxpayerId>
+		<authorizationCode>接入系统平台授权码(由平台提供)</authorizationCode >
+		<requestCode>数据交换请求发出方代码</requestCode>
+		<requestTime>数据交换请求方发出时间</requestTime>
+		<responseCode>数据交换请求接收方代码</responseCode>
+		<dataExchangeId>数据交换流水号</dataExchangeId>
+		<kpddm>开票点代码</kpddm>
+		<kpdmc>开票点名称</kpdmc>
+	</globalInfo>
+	<data>
+		<content>base64请求数据内容或者返回数据内容</content>
+	</data>
+</invoice_open>
