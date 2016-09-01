@@ -16,13 +16,14 @@ public class Demo1 {
 		String xml = getXML1();
 		System.out.println(xml);
 		IEInvWebServiceLocator service = new IEInvWebServiceLocator();
-		service.setIEInvWebServiceHttpPortEndpointAddress("http://192.168.253.192:10000/zzs_webCom/webservice/eInvWS/140114999999062");
+		service.setIEInvWebServiceHttpPortEndpointAddress("http://192.168.255.140:8080/zzs_webCom/webservice/eInvWS//140114999999062");
 		IEInvWebServicePortType sp = service.getIEInvWebServiceHttpPort();
 		String result = sp.eiInterface(xml);
 		System.out.println(result);
 	}
 	
 	private static String getXML1(){
+		String lsh = "d127kpyd45873405k563";
 		String content =
 		"<REQUEST_FPKJ class=\"REQUEST_FPKJ\">"+
 			"<GHFMC>购方名称</GHFMC>"+
@@ -39,7 +40,7 @@ public class Demo1 {
 			"<FHR>复核人</FHR>"+
 			"<SKY>收款人</SKY>"+
 			"<XHQD></XHQD>"+
-			"<FPQQLSH></FPQQLSH>"+
+			"<FPQQLSH>" + lsh + "</FPQQLSH>"+
 			"<KPLX>0</KPLX>"+
 			"<JSHJ>58.5</JSHJ>"+
 			"<HJJE>50</HJJE>"+
@@ -70,8 +71,8 @@ public class Demo1 {
 					"<passWord></passWord>" + 
 					"<requestCode></requestCode>" + 
 					"<requestTime>2016-08-16 15:20:55 123</requestTime>" + 
-					"<responseCode></responseCode>" + 
-					"<dataExchangeId></dataExchangeId>"+
+					"<responseCode>144</responseCode>" + 
+					"<dataExchangeId>" + lsh + "</dataExchangeId>"+
 					"<fjh></fjh>"+
 					"<jqbh></jqbh>"+
 				"</globalInfo>" + 
