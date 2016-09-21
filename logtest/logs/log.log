@@ -1,0 +1,25 @@
+2016-09-01 17:02:37  [ main:0 ] - [ DEBUG ]  This is debug message.
+2016-09-01 17:02:37  [ main:7 ] - [ INFO ]  This is info message.
+2016-09-01 17:02:37  [ main:8 ] - [ ERROR ]  This is error message.
+2016-09-01 17:05:19  [ main:1 ] - [ DEBUG ]  This is debug message.
+2016-09-01 17:05:19  [ main:2 ] - [ INFO ]  This is info message.
+2016-09-01 17:05:19  [ main:2 ] - [ ERROR ]  This is error message.
+2016-09-01 17:05:19  [ main:2 ] - [ WARN ]  warn message.
+2016-09-01 17:07:45  [ main:0 ] - [ DEBUG ]  This is debug message.
+2016-09-01 17:07:45  [ main:2 ] - [ INFO ]  This is info message.
+2016-09-01 17:07:45  [ main:3 ] - [ ERROR ]  This is error message.
+2016-09-01 17:07:45  [ main:3 ] - [ WARN ]  warn message.
+2016-09-01 17:07:45  [ main:4 ] - [ INFO ]  -----------------------------------------------------
+2016-09-01 17:07:45  [ main:5 ] - [ INFO ]  ddddd水电费是垃圾分类看的十分
+2016-09-01 17:09:22  [ main:0 ] - [ DEBUG ]  This is debug message.
+
+2016-09-01 17:09:22  [ main:1 ] - [ INFO ]  This is info message.
+
+2016-09-01 17:09:22  [ main:2 ] - [ ERROR ]  This is error message.
+
+2016-09-01 17:09:22  [ main:2 ] - [ WARN ]  warn message.
+
+2016-09-01 17:09:22  [ main:2 ] - [ INFO ]  -----------------------------------------------------
+
+2016-09-01 17:09:22  [ main:2 ] - [ INFO ]  ddddd水电费是垃圾分类dd看的十分
+

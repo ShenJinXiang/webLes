@@ -42,7 +42,7 @@ public class XzDemo {
 	
 	private static String getXML() throws UnsupportedEncodingException {
 		String fpdm = "1400083620";
-		String fphm = "00347791";
+		String fphm = "00347877";
 		String content =
 				"<dzfp_download>\r\n" +
 				"<fpdm>" + fpdm + "</fpdm>\r\n" +
